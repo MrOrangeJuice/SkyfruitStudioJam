@@ -1,5 +1,6 @@
 /// @description Hit
 
+ScreenShake(2,10);
 other.hp--;
 other.flash = 5;
 audio_play_sound(snd_Hit,5,false);

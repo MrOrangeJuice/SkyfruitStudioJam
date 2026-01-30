@@ -1,4 +1,3 @@
-/// @description Get out of sword mode
+/// @description Stop dashing
 
-swordMode = false;
-swordTimerSet = false;
+dashOver = true;

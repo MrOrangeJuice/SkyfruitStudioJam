@@ -12,3 +12,7 @@ shootTimer = 0;
 shootCooldown = 10;
 accel = 0.25;
 spawnDust = 0;
+dashing = false;
+airDash = false;
+dashOver = false;
+initialRunDir = 0;

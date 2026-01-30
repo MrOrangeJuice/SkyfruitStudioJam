@@ -4,10 +4,11 @@ key_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 key_jump = keyboard_check(vk_space) || keyboard_check(ord("Z")) || keyboard_check(ord("P"));
 key_jump_released = keyboard_check_released(vk_space) || keyboard_check_released(ord("Z")) || keyboard_check_released(ord("P"));
-key_shoot = keyboard_check_pressed(vk_lshift) || keyboard_check_pressed(ord("X")) || keyboard_check_pressed(ord("O"));
-key_shoot_released = keyboard_check_released(vk_lshift) || keyboard_check_released(ord("X")) || keyboard_check_released(ord("O"));
+key_shoot = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(ord("X")) || keyboard_check_pressed(ord("O"));
+key_shoot_released = mouse_check_button_released(mb_left) || keyboard_check_released(ord("X")) || keyboard_check_released(ord("O"));
+key_dash = keyboard_check_pressed(vk_lshift) || keyboard_check_pressed(ord("C")) || keyboard_check_pressed(ord("I"));
 
-if (key_left) || (key_right) || (key_jump) || (key_shoot)
+if (key_left) || (key_right) || (key_jump) || (key_shoot) || (key_dash)
 {
 	global.controller = 0;
 }
@@ -46,6 +47,12 @@ if (gamepad_button_check_pressed(0,gp_face3) || gamepad_button_check_pressed(0,g
 if (gamepad_button_check_released(0,gp_face3) || gamepad_button_check_released(0,gp_face2) || gamepad_button_check_released(4,gp_face3) || gamepad_button_check_released(4,gp_face2))
 {
 	key_shoot_released = 1;
+	global.controller = 1;
+}
+
+if (gamepad_button_check_pressed(0,gp_shoulderl) || gamepad_button_check_pressed(0,gp_shoulderr) || gamepad_button_check_pressed(4,gp_shoulderl) || gamepad_button_check_pressed(4,gp_shoulderr))
+{
+	key_dash = 1;
 	global.controller = 1;
 }
 
@@ -130,11 +137,85 @@ if(spawnDust-- < 0 && abs(hsp) > 0 && place_meeting(x,y+1,oWall))
 	spawnDust = irandom_range(3,7);
 }
 
-
 // Variable jump height
 if vsp < 0 && (!(key_jump)) //if you're moving upwards in the air but not holding down jump
 {
 	vsp *= 0.85; //essentially, divide your vertical speed
+}
+
+// Dash
+if(key_dash && !dashing)
+{
+	speedValue = 5;
+	dashing = true;
+	initialRunDir = image_xscale;
+	dashOver = false;
+	walksp = speedValue;
+	if(key_right)
+	{
+		currentwalksp = speedValue;
+	}
+	else if(key_left)
+	{
+		currentwalksp = -speedValue;
+	}
+	else
+	{
+		currentwalksp = speedValue * sign(image_xscale);
+	}
+	dashVFX = instance_create_layer(x,y,"VFX",oDashVFX);
+	if (image_xscale == -1) dashVFX.image_xscale = -1;
+	alarm[0] = room_speed * 0.2;
+	dashParticles = instance_create_layer(x,y,"Walls",oPlayerDashParticle);
+	alarm[1] = room_speed * 0.05;
+	if (airborne)
+	{
+		airDash = true;
+	}
+	audio_play_sound(snd_Dash,5,false);
+}
+			
+// Changes while dashing
+if(dashing)
+{
+	if(airDash)
+	{
+		vsp = 0;
+	}
+	else
+	{
+		if(airborne)
+		{
+			walksp -= 0.035;
+			if(walksp < 2) walksp = 2;
+		}
+	}
+}
+else
+{
+	walksp = 2;
+}
+			
+// End Dash
+if(dashOver)
+{
+	// If an air dash, stop immediately
+	if(airDash)
+	{
+		dashing = false;
+		airDash = false;
+		instance_destroy(dashParticles);
+	}
+	// Otherwise end when touching the ground or holding a different direction
+	else
+	{
+		if(!airborne || image_xscale != initialRunDir)
+		{
+			dashing = false;
+			airDash = false;
+			instance_destroy(dashParticles);
+		}
+	}
 }
 
 // Horizontal Collision
@@ -193,6 +274,10 @@ if(airborne)
 {
 	if (vsp <= 0) sprite_index = sPlayerPlaceholderJump;
 	if (vsp > 0) sprite_index = sPlayerPlaceholderJumpDown;
+}
+else if(dashing)
+{
+	sprite_index = sPlayerPlaceholderDash;	
 }
 else
 {
