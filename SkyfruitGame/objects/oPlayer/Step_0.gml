@@ -146,7 +146,7 @@ if vsp < 0 && (!(key_jump)) //if you're moving upwards in the air but not holdin
 // Dash
 if(key_dash && !dashing)
 {
-	speedValue = 5;
+	speedValue = 4;
 	dashing = true;
 	initialRunDir = image_xscale;
 	dashOver = false;
