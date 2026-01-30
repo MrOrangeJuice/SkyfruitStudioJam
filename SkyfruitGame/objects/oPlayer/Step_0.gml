@@ -60,26 +60,26 @@ if(key_jump_released)
 // Build up speed depending on inputs
 if(key_left && !key_right)
 {
-	currentwalksp -= 0.25;
-	if(currentwalksp < (-walksp - 0.5))
+	currentwalksp -= accel;
+	if(currentwalksp < (-walksp - accel * 2))
 	{
-		currentwalksp += 0.5;
+		currentwalksp += accel * 2;
 	}
 	else if(currentwalksp < -walksp)
 	{
-		currentwalksp += 0.25;
+		currentwalksp += accel;
 	}
 }
 if(key_right && !key_left)
 {
-	currentwalksp += 0.25;
-	if(currentwalksp > (walksp + 0.5))
+	currentwalksp += accel;
+	if(currentwalksp > (walksp + accel * 2))
 	{
-		currentwalksp -= 0.5;
+		currentwalksp -= accel * 2;
 	}
 	else if(currentwalksp > walksp)
 	{
-		currentwalksp -= 0.25;
+		currentwalksp -= accel;
 	}
 }
 // Slow down if not moving
@@ -87,11 +87,11 @@ if (!(key_left || key_right) || (key_left && key_right))
 {
 	if(currentwalksp < 0)
 	{
-		currentwalksp += 0.25;
+		currentwalksp += accel;
 	}
 	if(currentwalksp > 0)
 	{
-		currentwalksp -= 0.25;
+		currentwalksp -= accel;
 	}
 }
 	
@@ -108,16 +108,28 @@ if(!place_meeting(x, y + 1, oWall))
 }
 else
 {
+	if(airborne)
+			instance_create_layer(x,y,"VFX",oLandVFX);
 	airborne = false;	
 	jumpBuffer = 5;
 }
 
+// Jump
 if (jumpBuffer > 0) && (key_jump) && (canJump)
 {
 	vsp = -4;
 	audio_play_sound(snd_Jump, 5, false);
+	instance_create_layer(x,y,"VFX",oJumpVFX);
 	canJump = false;
 }
+
+// Spawn dust
+if(spawnDust-- < 0 && abs(hsp) > 0 && place_meeting(x,y+1,oWall))
+{
+	instance_create_layer(x+random_range(-2,2),y+6+random_range(-2,2),"BackVFX",oDustVFX);
+	spawnDust = irandom_range(3,7);
+}
+
 
 // Variable jump height
 if vsp < 0 && (!(key_jump)) //if you're moving upwards in the air but not holding down jump
@@ -156,11 +168,21 @@ if (key_shoot && shootTimer <= 0)
 	{
 		bullet.xdir = 1;
 		bullet.image_xscale = 1;
+		for(var i = 0; i < 3; i++)
+		{
+			var vfx = instance_create_layer(x+8,y+2,"VFX",oParticleStabVFXRight);
+			vfx.particleSpeed += hsp;
+		}
 	}
 	else
 	{
 		bullet.xdir = -1;	
 		bullet.image_xscale = -1;
+		for(var i = 0; i < 3; i++)
+		{
+			var vfx = instance_create_layer(x-8,y+2,"VFX",oParticleStabVFXLeft);
+			vfx.particleSpeed += abs(hsp);
+		}
 	}
 	audio_play_sound(snd_Shoot,5,false);
 	ScreenShake(1,5);

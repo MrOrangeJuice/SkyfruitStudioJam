@@ -1,0 +1,1 @@
+global.giftCount = 0;

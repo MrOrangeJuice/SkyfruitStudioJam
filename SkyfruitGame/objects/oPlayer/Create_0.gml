@@ -10,3 +10,5 @@ jumpBuffer = 0;
 airborne = false;
 shootTimer = 0;
 shootCooldown = 10;
+accel = 0.25;
+spawnDust = 0;
