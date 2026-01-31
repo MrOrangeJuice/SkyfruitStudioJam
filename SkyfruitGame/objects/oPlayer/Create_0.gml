@@ -16,3 +16,5 @@ dashing = false;
 airDash = false;
 dashOver = false;
 initialRunDir = 0;
+hit = false;
+invulnerable = 0;

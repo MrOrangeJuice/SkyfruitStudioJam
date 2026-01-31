@@ -1,3 +1,10 @@
 /// @description move
 
-x += xspeed * xdir;
+if(!global.paused)
+{
+	x += xspeed * xdir;
+}
+else
+{
+	
+}

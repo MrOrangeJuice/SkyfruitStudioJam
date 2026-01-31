@@ -6,11 +6,11 @@ if(dashing)
 	{
 		if(image_xscale > 0)
 		{
-			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerDashFade,1);
+			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerJumpFade,1);
 		}
 		else
 		{
-			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerDashReverseFade,1);
+			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerJumpReverseFade,1);
 		}
 		alarm[1] = room_speed * 0.05;
 	}
@@ -18,11 +18,11 @@ if(dashing)
 	{
 		if(image_xscale > 0)
 		{
-			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerJumpFade,1);
+			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerDashFade,1);
 		}
 		else
 		{
-			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerJumpReverseFade,1);
+			part_particles_create(oPlayerDashParticle.particleSystem,x,y,oPlayerDashParticle.particleTypePlayerDashReverseFade,1);
 		}
 		alarm[1] = room_speed * 0.05;
 	}
