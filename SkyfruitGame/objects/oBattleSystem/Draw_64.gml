@@ -36,8 +36,10 @@ if (room != rTitle)
 	}
 	
 	// Draw gifts
-	giftX = SCREEN_W - 16;
-	giftY = 16;
+	giftX = SCREEN_W - 20;
+	giftY = 2;
+	textOffsetX = 13;
+	textOffsetY = 1;
 	draw_sprite(
 		sGift,
 		0,
@@ -48,8 +50,8 @@ if (room != rTitle)
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_center);
 	draw_text_border(
-		giftX + GIFT_TEXT_X_OFFSET,
-		giftY + GIFT_TEXT_Y_OFFSET,
+		giftX + textOffsetX,
+		giftY + textOffsetY,
 		$"x{global.giftCount}"
 	)
 	

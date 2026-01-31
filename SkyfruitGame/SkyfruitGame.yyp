@@ -12,9 +12,9 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Dialogue System","folderPath":"folders/Dialogue System.yy","name":"Dialogue System","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Dialogue","folderPath":"folders/Dialogue System/Dialogue.yy","name":"Dialogue","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Voices","folderPath":"folders/Dialogue System/Voices.yy","name":"Voices","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Dialogue System/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Dialogue System/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Voices","folderPath":"folders/Dialogue System/Voices.yy","name":"Voices","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GMLive","folderPath":"folders/Extensions/GMLive.yy","name":"GMLive","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},

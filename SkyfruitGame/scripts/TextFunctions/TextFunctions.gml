@@ -156,10 +156,10 @@ function SetupTextbox() {
 function draw_text_border_ext(_x, _y, _str, _sep, _width, _scale = 1, _colour = c_white) {
 	for (var i = -1; i <= 1; i++) {
 		for (var j = -1; j <= 1; j++) {
-			draw_text_ext_transformed_color(_x + i, _y + j, _str, _sep, _width, _scale, _scale, 1, c_black, c_black, c_black, c_black, 1);
+			draw_text_ext_transformed_color(_x + i, _y + j, _str, _sep, _width, _scale, _scale, 0, c_black, c_black, c_black, c_black, 1);
 		}
 	}
-	draw_text_ext_transformed_color(_x, _y, _str, _sep, _width, _scale, _scale, 1, _colour, _colour, _colour, _colour, 1);
+	draw_text_ext_transformed_color(_x, _y, _str, _sep, _width, _scale, _scale, 0, _colour, _colour, _colour, _colour, 1);
 }
 function draw_text_border(_x, _y, _str) {
 	draw_text_border_ext(_x, _y, _str, 99, 99);
