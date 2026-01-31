@@ -1,8 +1,10 @@
+if live_call() return live_result;
+
 healthTextScale = max(healthTextScale * .95, 1);
 healthToDraw = global.health;
 xMod = 0;
 
-if(room != rTitle)
+if (room != rTitle)
 {
 	for(i = 0; i < global.maxHealth; i++)
 	{
@@ -32,6 +34,24 @@ if(room != rTitle)
 		}
 		healthToDraw--;
 	}
+	
+	// Draw gifts
+	giftX = SCREEN_W - 16;
+	giftY = 16;
+	draw_sprite(
+		sGift,
+		0,
+		giftX,
+		giftY
+	)
+	draw_set_font(fntBitty);
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_center);
+	draw_text_border(
+		giftX + GIFT_TEXT_X_OFFSET,
+		giftY + GIFT_TEXT_Y_OFFSET,
+		$"x{global.giftCount}"
+	)
 	
 	// Draw Pause Menu
 	if(global.paused)

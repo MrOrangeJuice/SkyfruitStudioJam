@@ -1,13 +1,8 @@
-global.paused = false;
-global.hitPause = false;
-global.maxHealth = 10;
-global.health = 7;
+// Global objects
+global.text_handler = instance_create_depth(0, 0, 0, oTextHandler);
+global.transition = instance_create_depth(0, 0, 0, oTransition);
+
 healthTextScale = 1;
 pauseOption = 0;
-
-#macro SCREEN_W 320
-#macro SCREEN_H 180
-#macro NONE undefined
-#macro LAYER_INSTANCES "Instances"
 
 display_set_gui_size(SCREEN_W,SCREEN_H);

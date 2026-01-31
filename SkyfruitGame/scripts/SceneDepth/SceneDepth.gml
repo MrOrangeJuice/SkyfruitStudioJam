@@ -1,0 +1,2 @@
+#macro PORTRAIT_DEPTH -100
+#macro TEXTBOX_DEPTH -900
