@@ -290,8 +290,8 @@ if(hit)
 }
 else if(airborne)
 {
-	if (vsp <= 0) sprite_index = sPlayerPlaceholderJump;
-	if (vsp > 0) sprite_index = sPlayerPlaceholderJumpDown;
+	if (vsp <= 0) sprite_index = sPlayerJump;
+	if (vsp > 0) sprite_index = sPlayerJumpDown;
 }
 else if(dashing)
 {
@@ -301,7 +301,7 @@ else
 {
 	if (hsp != 0)
 	{
-		sprite_index = sPlayerPlaceholderRun;
+		sprite_index = sPlayerRun;
 	}
 	else
 	{
