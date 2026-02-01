@@ -305,7 +305,7 @@ else
 	}
 	else
 	{
-		sprite_index = sPlayerPlaceholder;
+		sprite_index = sPlayer;
 	}
 }
 

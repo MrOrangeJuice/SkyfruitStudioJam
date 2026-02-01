@@ -129,6 +129,7 @@
     {"id":{"name":"sPalette","path":"sprites/sPalette/sPalette.yy",},},
     {"id":{"name":"sParticleStabVFX","path":"sprites/sParticleStabVFX/sParticleStabVFX.yy",},},
     {"id":{"name":"sPauseMenu","path":"sprites/sPauseMenu/sPauseMenu.yy",},},
+    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPlayerPlaceholder","path":"sprites/sPlayerPlaceholder/sPlayerPlaceholder.yy",},},
     {"id":{"name":"sPlayerPlaceholderDash","path":"sprites/sPlayerPlaceholderDash/sPlayerPlaceholderDash.yy",},},
     {"id":{"name":"sPlayerPlaceholderDashRed","path":"sprites/sPlayerPlaceholderDashRed/sPlayerPlaceholderDashRed.yy",},},
