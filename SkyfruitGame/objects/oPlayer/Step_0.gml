@@ -4,7 +4,7 @@ key_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 key_jump = keyboard_check(vk_space) || keyboard_check(ord("Z")) || keyboard_check(ord("P"));
 key_jump_released = keyboard_check_released(vk_space) || keyboard_check_released(ord("Z")) || keyboard_check_released(ord("P"));
-key_shoot = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(ord("X")) || keyboard_check_pressed(ord("O"));
+key_shoot = mouse_check_button(mb_left) || keyboard_check(ord("X")) || keyboard_check(ord("O"));
 key_shoot_released = mouse_check_button_released(mb_left) || keyboard_check_released(ord("X")) || keyboard_check_released(ord("O"));
 key_dash = keyboard_check_pressed(vk_lshift) || keyboard_check_pressed(ord("C")) || keyboard_check_pressed(ord("I"));
 
@@ -38,7 +38,7 @@ if (gamepad_button_check_released(0,gp_face1) || gamepad_button_check_released(4
 	global.controller = 1;
 }
 
-if (gamepad_button_check_pressed(0,gp_face3) || gamepad_button_check_pressed(0,gp_face2) || gamepad_button_check_pressed(4,gp_face3) || gamepad_button_check_pressed(4,gp_face2))
+if (gamepad_button_check(0,gp_face3) || gamepad_button_check(0,gp_face2) || gamepad_button_check(4,gp_face3) || gamepad_button_check(4,gp_face2))
 {
 	key_shoot = 1;
 	global.controller = 1;
@@ -173,6 +173,20 @@ if(!global.paused && !global.hitPause)
 		}
 		dashVFX = instance_create_layer(x,y,"VFX",oDashVFX);
 		if (image_xscale == -1) dashVFX.image_xscale = -1;
+		if(key_right)
+		{
+			for(var i = 0; i < 5; i++)
+			{
+				instance_create_layer(x-8,y+2,"VFX",oDashDustVFXLeft);
+			}
+		}
+		else if(key_left)
+		{
+			for(var i = 0; i < 5; i++)
+			{
+				instance_create_layer(x+8,y+2,"VFX",oDashDustVFXRight);
+			}
+		}
 		alarm[0] = room_speed * 0.2;
 		dashParticles = instance_create_layer(x,y,"Walls",oPlayerDashParticle);
 		alarm[1] = room_speed * 0.05;
@@ -253,7 +267,7 @@ if(!global.paused && !global.hitPause)
 	{
 		shootTimer = shootCooldown;
 		bullet = instance_create_layer(x+(13*image_xscale),y+3.5,"Bullets",oBullet);
-		if(image_xscale == 1)
+		if(key_right)
 		{
 			bullet.xdir = 1;
 			bullet.image_xscale = 1;
@@ -263,7 +277,7 @@ if(!global.paused && !global.hitPause)
 				vfx.particleSpeed += hsp;
 			}
 		}
-		else
+		else if(key_left)
 		{
 			bullet.xdir = -1;	
 			bullet.image_xscale = -1;
@@ -271,6 +285,29 @@ if(!global.paused && !global.hitPause)
 			{
 				var vfx = instance_create_layer(x-8,y+2,"VFX",oParticleStabVFXLeft);
 				vfx.particleSpeed += abs(hsp);
+			}
+		}
+		else
+		{
+			if(image_xscale == 1)
+			{
+				bullet.xdir = 1;
+				bullet.image_xscale = 1;
+				for(var i = 0; i < 3; i++)
+				{
+					var vfx = instance_create_layer(x+8,y+2,"VFX",oParticleStabVFXRight);
+					vfx.particleSpeed += hsp;
+				}
+			}
+			else
+			{
+				bullet.xdir = -1;	
+				bullet.image_xscale = -1;
+				for(var i = 0; i < 3; i++)
+				{
+					var vfx = instance_create_layer(x-8,y+2,"VFX",oParticleStabVFXLeft);
+					vfx.particleSpeed += abs(hsp);
+				}
 			}
 		}
 		audio_play_sound(snd_Shoot,5,false);
@@ -295,7 +332,7 @@ else if(airborne)
 }
 else if(dashing)
 {
-	sprite_index = sPlayerPlaceholderDash;	
+	sprite_index = sPlayerDash;	
 }
 else
 {
@@ -309,4 +346,18 @@ else
 	}
 }
 
-if (hsp != 0 && !hit) image_xscale = sign(hsp);
+if (hsp != 0 && !hit) 
+{
+	if(key_right)
+	{
+		image_xscale = 1;
+	}
+	else if(key_left)
+	{
+		image_xscale = -1;
+	}
+	else
+	{
+		image_xscale = sign(hsp);
+	}
+}
