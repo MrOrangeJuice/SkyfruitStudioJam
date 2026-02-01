@@ -6,7 +6,7 @@ text_pause_voice_timer--;
 
 
 // Skip text (do this before playing audio)
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check_pressed(vk_space) or keyboard_check(ord("C"))) {
 	char_count = text_length;
 }
 

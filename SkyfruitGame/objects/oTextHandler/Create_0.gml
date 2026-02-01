@@ -90,7 +90,7 @@ StateReadPage = function() {
 
 StateAwaitNextPage = function() {
 
-	if (keyboard_check_pressed(vk_space)) {
+	if (keyboard_check_pressed(vk_space) or keyboard_check(ord("C"))) {
 
 		// Textbox is over
 		instance_destroy(active_textbox);

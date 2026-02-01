@@ -25,6 +25,13 @@ function CodePage(_code, _args) {
     }
 }
 
+function GotoPage(_goto) {
+    return {
+		type: PAGE_TYPE.GOTO,
+		goto: _goto,
+    }
+}
+
 
 function ChoicePage() {
 	var _choices = [];
@@ -38,11 +45,13 @@ function ChoicePage() {
 	}
 }
 
-function Choice(_text, _next_key, _gift_req = 0) {
+function Choice(_text, _next_key, _gift_req = 0, _icon = NONE, _flag = NONE) {
     return {
         text: _text,
         next_key: _next_key,
         gift_req: _gift_req,
+		icon: _icon,
+		flag: _flag,
     }
 }
 
@@ -56,9 +65,9 @@ function Speaker(_name, _voice, _portrait) {
 }
 
 #macro spk_johnny "spkJohnny"
-#macro spk_jane "spkJane"
+#macro spk_isla "spkIsla"
 #macro spk_none "spkNone"
 
 global.spkNone = Speaker(NONE, NONE, NONE);
-global.spkJohnny = Speaker("Johnny", vTest, oPortraitJohnny);
-global.spkJane = Speaker("Jane", vTest, oPortraitJane);
+global.spkJohnny = Speaker("Johnny", vTest, oPorJohnny);
+global.spkIsla = Speaker("Isla", vTest, oPorIsla);

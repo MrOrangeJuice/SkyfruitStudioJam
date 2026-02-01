@@ -46,7 +46,7 @@ if (room != rTitle)
 		giftX,
 		giftY
 	)
-	draw_set_font(fntBitty);
+	draw_set_font(fntDaniel);
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_center);
 	draw_text_border(

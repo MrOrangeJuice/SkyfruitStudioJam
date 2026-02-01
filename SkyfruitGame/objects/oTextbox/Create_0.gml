@@ -10,7 +10,7 @@ frame = 0;
 // Speaker
 name = "Nobody";
 voice = vTest;
-font = fntBitty;
+font = fntDaniel;
 sprite_index = sTextbox;
 
 // Screen position params

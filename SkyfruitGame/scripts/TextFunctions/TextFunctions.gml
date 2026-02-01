@@ -153,13 +153,13 @@ function SetupTextbox() {
     text_length = string_length(text);
 }
 
-function draw_text_border_ext(_x, _y, _str, _sep, _width, _scale = 1, _colour = c_white) {
+function draw_text_border_ext(_x, _y, _str, _sep, _width, _scale = 1, _colour = c_white, _alpha = 1) {
 	for (var i = -1; i <= 1; i++) {
 		for (var j = -1; j <= 1; j++) {
-			draw_text_ext_transformed_color(_x + i, _y + j, _str, _sep, _width, _scale, _scale, 0, c_black, c_black, c_black, c_black, 1);
+			draw_text_ext_transformed_color(_x + i, _y + j, _str, _sep, _width, _scale, _scale, 0, c_black, c_black, c_black, c_black, _alpha);
 		}
 	}
-	draw_text_ext_transformed_color(_x, _y, _str, _sep, _width, _scale, _scale, 0, _colour, _colour, _colour, _colour, 1);
+	draw_text_ext_transformed_color(_x, _y, _str, _sep, _width, _scale, _scale, 0, _colour, _colour, _colour, _colour, _alpha);
 }
 function draw_text_border(_x, _y, _str) {
 	draw_text_border_ext(_x, _y, _str, 99, 99);
@@ -181,7 +181,7 @@ function CreateTextbox(_page, _params = {}) {
 		
 		SetupTextbox();
 		// Jump the portrait
-		if (portrait != NONE) { PortraitJump(portrait); }
+		if (portrait != NONE) { PorJump(portrait); }
 	}
 	return _textbox;
 }

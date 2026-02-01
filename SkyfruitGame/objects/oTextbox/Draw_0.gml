@@ -68,6 +68,7 @@ for (var c = 0; c < min(char_count, text_length); c++) {
 
 	// Draw text
 	var _col = char_col[c];
+	draw_set_halign(fa_left);
 	draw_text_border_ext(
 		x + (char_x[c] + _shake_adj_x) + border_x,
 		y + (char_y[c] + _wave_adj + _shake_adj_y) + border_y,
@@ -79,6 +80,16 @@ for (var c = 0; c < min(char_count, text_length); c++) {
 	)
 }
 
+// Draw any associated icon
+if (icon != NONE) {
+	draw_sprite(
+		icon,
+		0,
+		x + textbox_w - 16,
+		y + textbox_h - 16
+	)
+}
+
 // Draw the gift req
 if (gift_req != 0) {
 	draw_sprite(
@@ -87,9 +98,10 @@ if (gift_req != 0) {
 		x + textbox_w,
 		y + textbox_h
 	)
+	draw_set_halign(fa_left);
 	draw_text_border(
-		x + textbox_w + GIFT_TEXT_X_OFFSET,
-		y + textbox_h + GIFT_TEXT_Y_OFFSET,
+		x + textbox_w + 10,
+		y + textbox_h + 2,
 		$"x{gift_req}"
 	)
 }

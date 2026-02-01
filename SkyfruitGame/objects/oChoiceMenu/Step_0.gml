@@ -13,7 +13,7 @@ pos += down - up;
 pos = (pos + n_options) % n_options; // Loop around
 
 // SFX
-if (down - up != 0) { audio_play_sound(sndGunClick, 0, false); }
+if (down - up != 0) { audio_play_sound(snd_GunClick, 0, false); }
 
 // Slide textboxes in
 for (var i = 0; i < n_options; i++) {
@@ -28,12 +28,23 @@ sel_y = Approach(sel_y, tar_y, 0.4, 1);
 
 // Selecting
 if (interact and t > grace_frames) {
+	var _gift_cost = options[pos].gift_req;
+
 	// Not enough gift
-	if (global.giftCount < choices[pos].gift_req) {
-		audio_play_sound(sndGunEmpty, 0, false);
-	} else {
-		global.giftCount -= choices[pos].gift_req;
-		audio_play_sound(sndGunFire, 0, false);
-		choice_made = choices[pos];
+	if (global.giftCount < _gift_cost) {
+		audio_play_sound(snd_GunEmpty, 0, false);
+	}
+	
+	// Successful select
+	else {
+		global.giftCount -= _gift_cost;
+		audio_play_sound(snd_GunFire, 0, false);
+		if (_gift_cost > 0) {
+			audio_play_sound(snd_SpendGift, 0, false);
+		}
+		
+		// Set state flag for any choice with an associated flag (to prevent duplicates)
+		if (options[pos].flag != NONE) { SetStateFlag(options[pos].flag); }
+		choice_made = options[pos];
 	}
 }
