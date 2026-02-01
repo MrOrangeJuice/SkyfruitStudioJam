@@ -36,6 +36,7 @@
     {"$GMObjectProperty":"v2","%Name":"border_x","filters":[],"listItems":[],"multiselect":false,"name":"border_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"8","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"border_y","filters":[],"listItems":[],"multiselect":false,"name":"border_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"4","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"gift_req","filters":[],"listItems":[],"multiselect":false,"name":"gift_req","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"icon","filters":[],"listItems":[],"multiselect":false,"name":"icon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NONE","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

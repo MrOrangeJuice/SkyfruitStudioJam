@@ -1,0 +1,271 @@
+scene_isla = {
+	isla_1: [
+		CodePage(PorEnter, [oPorJohnny]),
+		Page(spk_johnny, "Well, here goes nothin'."),
+		Page(spk_johnny, "Knock knock."),
+		CodePage(PorEnter, [oPorIsla]),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "Eheh. |V|Weeeellllllllll,/V/ look what the darn gon' did gosh dang |V|CAT/V/ dragged in."),
+		Page(spk_johnny, "Hey Isla."),
+		Page(spk_isla, "|V|Wheeeeeeeeeee-EW,/V/ is that really Johnny Slick at my very doorstep?"),
+		ChoicePage(
+			Choice("It's me", "its_me"),
+			Choice("Missed me, sweetheart?", "missed_me", 1),
+		),
+	],
+	its_me: [
+		Page(spk_johnny, "It's me."),
+		Page(spk_isla, "It sure be."),
+		GotoPage("isla_2"),	
+	],
+	missed_me: [
+		Page(spk_johnny, "Missed me, sweetheart?"),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "|V|Yeeeeeesh.../V/ Johnny Slick never do hold back, do he?"),
+		GotoPage("isla_2"),
+	],
+	
+	
+	isla_2: [
+		Page(spk_isla, "The same crooked wannabe cowboy look..."),
+		Page(spk_isla, "The same sorry-not-sorry eyes..."),
+		Page(spk_isla, "Y'all remember how you dun left me last time your rear end was in town?"),
+		Page(spk_johnny, "I, uh....."),
+		Page(spk_isla, "Don' borther rememberin' cos I'mma let you have it."),
+		ChoicePage(
+			Choice("Fell out a window", "window"),
+			Choice("Lost a bet", "lost_bet"),
+		),
+	],
+	window: [
+		Page(spk_isla, "You and I had just finished what I would |V|almost/V/ have called a romantic evenin'."),
+		Page(spk_johnny, "Isla, I..."),
+		Page(spk_isla, "Oh, you were showerin' me with yer praises, says I was the prettiest girl this side of the Big Donut."),
+		Page(spk_isla, "Took you up to my room, we spent almost all night..."),
+		Page(spk_isla, "...playin' cards."),
+		Page(spk_johnny, "The romance-iest activity in the West."),
+		Page(spk_isla, "Right. It was |V|almost/V/ lovely."),
+		Page(spk_isla, "'til right about 3am I hear this terrifyin' crash."),
+		Page(spk_isla, "Ol' Johnny ain't so Slick now. Crawlin' out my window, slippin' on those mighty boots o'yers."),
+		Page(spk_isla, "Three flights o'stairs down into the dumpster."),
+		Page(spk_isla, "|V||S|CRASH!!!/V//S/"),
+		Page(spk_johnny, "...heh... Good times, right Isla?"),
+		GotoPage("isla_3"),
+	],
+	lost_bet: [
+		Page(spk_isla, "You picked me up at a bar and yapped yer head off for hours about life on the open road."),
+		Page(spk_isla, "I didn't believe a word of it, o'course."),
+		Page(spk_isla, "I mean, seriously, who would?"),
+		Page(spk_isla, "But the way you were tellin' them stories..."),
+		Page(spk_isla, "I don't please easy, Johnny, but somethin' about you."),
+		Page(spk_isla, "It was worth a shot, at least."),
+		Page(spk_isla, "Heck, I even went so far as to imagine the two of us, alone somewhere safe....."),
+		Page(spk_isla, "Chewin' bubblegum."),
+		Page(spk_johnny, "Isla, we can still..."),
+		Page(spk_isla, "That'd've been so nice."),
+		Page(spk_isla, "But then you sat down at that gosh-darned card game and a few hours later... well..."),
+		Page(spk_isla, "You tried to walk back over to me with almost all yer clothes missin'."),
+		Page(spk_johnny, "Well, the rules of the game..."),
+		Page(spk_isla, "|S|Who loses their clothes playin' poker, Johnny?/S/"),
+		Page(spk_isla, "I walked right out."),
+		GotoPage("isla_3"),
+	],
+	
+	isla_3: [
+		Page(spk_isla, "I've never been so immediately un-attracted-ed to a man in my entire life."),
+		Page(spk_isla, "And I once kissed Billy Bad-Breath just for the heckavit."),
+		Page(spk_johnny, "Isla, jus' lemme talk."),
+		Page(spk_isla, "Urgh."),
+		ChoicePage(
+			Choice("Polish your gun", "polish_gun", 2, sFireSpeedUp),
+			Choice("Tighten your boots", "tighten_boots", 2, sMoveSpeedUp),
+		),
+	],
+	polish_gun: [
+		Page(spk_none, "You put on your serious cowboy face and polish your gun."),
+		CodePage(GetUpgrade, [UPGRADES.FIRE_SPEED_UP]),
+		Page(spk_none, "You're slick for that. Fire speed increased."),
+		GotoPage("isla_4"),
+	],
+	tighten_boots: [
+		Page(spk_none, "You bend down to tighten your boots, showing off your boot-tightening muscles."),
+		CodePage(GetUpgrade, [UPGRADES.MOVE_SPEED_UP]),
+		Page(spk_none, "You're slick for that. Move speed increased."),
+		GotoPage("isla_4"),
+	],
+	
+	
+	isla_4: [
+	
+		Page(spk_isla, "Always tryin'ta impress, Johnny."),
+		Page(spk_johnny, "Heh. Is it workin'?"),
+		Page(spk_isla, "Not a chance."),
+		Page(spk_johnny, "I wouldn't be here 'less it was important, Isla."),
+		Page(spk_johnny, "And it's important."),
+		Page(spk_isla, "You're nothin' to me, Johnny."),
+		ChoicePage(
+			Choice("You're right", "youre_right"),
+			Choice("I reckon' I'm somethin' to you", "im_somethin"),
+		),
+	],
+	youre_right: [
+		Page(spk_johnny, "Tsk. You're right. But..."),
+		GotoPage("isla_5"),
+	],
+	im_somethin: [
+		Page(spk_johnny, "Naw. I reckon' I'm somethin' to you."),
+		Page(spk_isla, "..."),
+		ChoicePage(
+			Choice("...", "you_aint"),
+			Choice("Enough to pour me a drink?", "pour_drink", 1, sHealthUp),
+		),
+	],
+	you_aint: [
+		Page(spk_isla, "You ain't."),
+		GotoPage("isla_5"),
+	],
+	pour_drink: [
+		Page(spk_johnny, "Somethin' enough to pour me a drink?"),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "Urgh. Johnny. The cowboy."),
+		Page(spk_isla, "Always rootin'. Always tootin'. Always shootin'... yer shot."),
+		Page(spk_isla, "I'll pour you a drink."),
+		Page(spk_none, "Isla makes you a drink."),
+		CodePage(GetUpgrade, [UPGRADES.HEALTH_UP]),
+		Page(spk_none, "You're slick for that. Health increased."),
+		GotoPage("isla_5"),
+
+	],
+
+	isla_5: [
+		Page(spk_johnny, "Jus' lemme tell you my woes for a time and I'll be on my way."),
+		Page(spk_isla, "Honestly, Johnny, sometimes I can't even figure out what you mean to say."),
+		Page(spk_isla, "So jus' say yer nonsense and be on with it."),
+		Page(spk_johnny, "I'm in a pickle, Isla."),
+		Page(spk_johnny, "I came to you because you meant somethin-- you MEAN somethin' to me."),
+		Page(spk_johnny, "...Mustard's missin'."),
+		Page(spk_isla, "Mustards... pickles... who cares, Johnny?"),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "Oh no you dun meant yer horse."),
+		Page(spk_johnny, "It's... complicated."),
+		Page(spk_isla, "Villain stole yer horse, didn't they?"), // TODO: replace with the villain
+		Page(spk_johnny, "Yeah."),
+		ChoicePage(
+			Choice("I'm just a deadbeat.", "deadbeat"),
+			Choice("I care about her so much.", "care_about_her", 1),
+		),
+	],
+	deadbeat: [
+		Page(spk_johnny, "I'm just a deadbeat Isla."),
+		Page(spk_johnny, "I don't deserve anything from anyone."),
+		GotoPage("isla_6"),
+	],
+	care_about_her: [
+		Page(spk_johnny, "I care about her so dang much, Isla."),
+		Page(spk_johnny, "I jus'... wanna get 'er back."),
+		Page(spk_isla, "..."),
+		GotoPage("isla_6"),
+	],
+	
+	isla_6: [
+		Page(spk_isla, "Oh Johnny. Yer so pathetic."),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "Alright. What can I do?"),
+		ChoicePage(
+			Choice("Seein' yer smile is enough.", "isla_final"),
+			Choice("Kiss my gun for good luck.", "kiss_gun", 5, sDamageUp, "islaKiss"),
+			Choice("Help me practise my draw.", "practise_draw", 5, sFireSpeedUp, "islaDraw"),
+			Choice("Fashion advice?", "fashion", 5, sMoveSpeedUp, "islaFashion"),
+			Choice("Give me your gun.", "your_gun", 12, sBigBullets, "islaGun"),
+		),
+	],
+	isla_return_point: [
+		Page(spk_isla, "What else?"),
+		ChoicePage(
+			Choice("Seein' yer smile is enough.", "isla_final_1"),
+			Choice("Kiss my gun for good luck.", "kiss_gun", 5, sDamageUp, "islaKiss"),
+			Choice("Help me practise my draw.", "practise_draw", 5, sFireSpeedUp, "islaDraw"),
+			Choice("Fashion advice?", "fashion", 5, sMoveSpeedUp, "islaFashion"),
+			Choice("Give me your gun.", "your_gun", 12, sBigBullets, "islaGun"),
+		),
+	],
+	
+	
+	kiss_gun: [
+		Page(spk_johnny, "Wouldja... kiss my gun? For good luck?"),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "Quit beatin' around the bush, Johnny. We both know I have magical kissin' powers that buff yer gun's damage."),
+		Page(spk_isla, "I'll do it."),
+		Page(spk_none, "Isla kisses your gun."),
+		CodePage(GetUpgrade, [UPGRADES.DAMAGE_UP]),
+		Page(spk_none, "You're slick for that. Bullet damage increased."),
+		Page(spk_johnny, "Heh. Thanks, darlin'."),
+		Page(spk_isla, "It's |V|Isla,/V/ Johnny."),
+		GotoPage("isla_return_point"),
+	],
+	practise_draw: [
+		Page(spk_johnny, "Help me practise my draw?"),
+		Page(spk_isla, "Urgh. You're pathetic."),
+		Page(spk_none, "Isla saddles up behind you and helps you practise drawing your gun."),
+		CodePage(GetUpgrade, [UPGRADES.FIRE_SPEED_UP]),
+		Page(spk_none, "You're slick for that. Fire speed increased."),
+		GotoPage("isla_return_point"),
+	],
+	fashion: [
+		Page(spk_johnny, "Uhm... help me... with my boots?"),
+		Page(spk_isla, "With yer boots, Johnny?"),
+		Page(spk_johnny, "Uhm, yeah?"),
+		Page(spk_isla, "|V|Urgh..../V/ I got a nicer pair upstairs..."),
+		Page(spk_none, "Isla picks out a nicer pair of boots for you."),
+		CodePage(GetUpgrade, [UPGRADES.MOVE_SPEED_UP]),
+		Page(spk_none, "You're slick for that. Move speed increased."),
+		GotoPage("isla_return_point"),
+	],
+	your_gun: [
+		Page(spk_johnny, "Lend me yer gun."),
+		Page(spk_isla, "Johnny... how forward of you."),
+		Page(spk_isla, "This is my great grandmaw's gun. She used to shoot all the boys around town with it..."),
+		Page(spk_none, "Your eyes sparkle for a moment. Something in Isla changes."),
+		Page(spk_isla, "Eheh. Johnny..."),
+		Page(spk_isla, "There's still somethin' about you, Johnny."),
+		Page(spk_isla, "Even here, at rock bottom, comin' to little-ol'-me fer help..."),
+		Page(spk_isla, "Beggin' for mercy."),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "Alright. But yer bringin' 'er back in one piece, y'hear me?"),
+		Page(spk_johnny, "Heh. Of course, Isla. Much obliged."),
+		Page(spk_none, "Isla lends you her gun."),
+		CodePage(GetUpgrade, [UPGRADES.BIG_BULLETS]),
+		Page(spk_none, "You're slick for that. Bullet size increased."),
+		GotoPage("isla_return_point"),
+	],
+	
+	isla_final_1: [
+		Page(spk_johnny, "Seein' your beautiful smile is enough for me right now."),
+		Page(spk_isla, "Alright. Be careful out there, Johnny."),
+		ChoicePage(
+			Choice("I will.", "i_will"),
+			Choice("You'll see me again.", "last_of_me", 2),
+		),
+	],
+	i_will: [
+		Page(spk_johnny, "Heh. I will."),
+		GotoPage("isla_final_2"),
+	],
+	last_of_me: [
+		Page(spk_johnny, "You haven't seen the last of me yet, Isla."),
+		Page(spk_johnny, "I'll come back. And we'll... play cards, some time."),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "I think I'd like that, Johnny."),
+		Page(spk_isla, "Now get outta here, ya no-good horse-losin' wannabe deadbeat, good-fer-nothin'...."),
+		Page(spk_isla, "..."),
+		Page(spk_isla, "Good luck."),
+		GotoPage("isla_final_2"),
+	],
+	isla_final_2: [
+		CodePage(PorExit, [oPorJohnny]),
+		CodePage(PorExit, [oPorIsla]),
+	],
+
+
+	
+}

@@ -4,7 +4,6 @@ t = 0;
 grace_frames = 30;
 alpha = 0;
 
-font = fntBitty;
 sprite_index = sTextbox;
 
 // Initialize variables
@@ -14,32 +13,41 @@ down = 0;
 interact = 0;
 options = [];
 for (var i = 0; i < array_length(choices); i++) {
-	options[i] = choices[i].text;
+	
+	// If choices have an associated flag, treat them special
+	if (choices[i].flag == NONE or !GetStateFlag(choices[i].flag)) {
+		array_push(options, choices[i]);
+	}
 }
 n_options = array_length(options);
 
+// Hide original textboxes for many options
+if (n_options > 4) {
+	with (oTextbox) { visible = false; }
+}
 
 // Creating the textboxes (need textboxes for coloured words, etc)
 textboxes = [];
 
-textbox_w = 140;
+textbox_w = 160;
 textbox_h = 18;
 textbox_y = function(_pos) {
-	return  32 + (textbox_h + 8)*_pos;
+	return  20 + (textbox_h + 8)*_pos;
 }
 
 for (var i = 0; i < n_options; i++) {
 	textboxes[i] = CreateTextbox(
-		Page(spk_none, options[i]),
+		Page(spk_none, options[i].text),
 		{
 			textbox_y: textbox_y(i),
 			textbox_w: textbox_w,
 			textbox_h: textbox_h,
 			center_text: true,
 			instant_text: true,
-			border_x: 0,
-			border_y: 1,
-			gift_req: choices[i].gift_req,
+			border_x: 12,
+			border_y: 0,
+			gift_req: options[i].gift_req,
+			icon: options[i].icon,
 		}
 	);
 	textboxes[i].x = -100;
