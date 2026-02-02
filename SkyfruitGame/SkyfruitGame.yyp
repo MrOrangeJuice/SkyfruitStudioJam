@@ -145,7 +145,7 @@
     {"id":{"name":"sBigBullets","path":"sprites/sBigBullets/sBigBullets.yy",},},
     {"id":{"name":"sBottle","path":"sprites/sBottle/sBottle.yy",},},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},},
-    {"id":{"name":"sBullet1","path":"sprites/sBullet1/sBullet1.yy",},},
+    {"id":{"name":"sBulletEnemy","path":"sprites/sBulletEnemy/sBulletEnemy.yy",},},
     {"id":{"name":"sCannonBall","path":"sprites/sCannonBall/sCannonBall.yy",},},
     {"id":{"name":"sChoicerGun","path":"sprites/sChoicerGun/sChoicerGun.yy",},},
     {"id":{"name":"sClouds","path":"sprites/sClouds/sClouds.yy",},},
