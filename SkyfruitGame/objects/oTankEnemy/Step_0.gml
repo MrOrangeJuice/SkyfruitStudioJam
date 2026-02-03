@@ -28,13 +28,11 @@ if(!global.paused && !global.hitPause)
 			dir *= -1;
 		}
 		
-		
 		// Vertical Ledge Collision
-		// If no ground below you reverse direction
-		if (!place_meeting(x+(24*dir),y+1,oWall))
+		// If no ground below stop
+		if (!place_meeting(x+(24*hsp),y+1,oWall))
 		{
-			dir *= -1;
-			vsp = 0;
+			hsp = 0;
 		}
 	
 		// Randomly stop moving
@@ -77,15 +75,9 @@ if(!global.paused && !global.hitPause)
 		// Check for state change
 		if(instance_exists(oPlayer))
 		{
-			if(oPlayer.y - 16 < y && y < oPlayer.y + 64)
+			if(oPlayer.y - 120 < y && y < oPlayer.y + 120)
 			{
-				if(dir == -1 && oPlayer.x < x)
-				{
-					state = "spotted";
-					alarm[3] = room_speed * 2;
-					instance_create_layer(x,y-18,"VFX",oSpottedVFX);
-				}
-				if(dir == 1 && oPlayer.x > x)
+				if(oPlayer.x > x - 240 && oPlayer.x < x + 240)
 				{
 					state = "spotted";
 					alarm[3] = room_speed * 2;
@@ -111,11 +103,14 @@ if(!global.paused && !global.hitPause)
 		// Check for state change
 		if(instance_exists(oPlayer))
 		{
-			if(!(oPlayer.y - 16 < y && y < oPlayer.y + 64))
+			if(!(oPlayer.y - 120 < y && y < oPlayer.y + 120))
 			{
-				state = "patrol";
-				firing = false;
-				hsp = 0.5;
+				if(!(oPlayer.x > x - 240 && oPlayer.x < x + 240))
+				{
+					state = "patrol";
+					firing = false;
+					hsp = 0.5;
+				}
 			}
 		}
 		
