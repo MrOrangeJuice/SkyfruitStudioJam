@@ -239,6 +239,30 @@ if(!global.paused && !global.hitPause)
 			}
 		}
 	}
+	
+	if(!invulnerable)
+	{
+		mask_index = sHurtbox;
+		var enemyHitRight = instance_place(x+(1*image_xscale),y,oEnemy);
+		var enemyHitLeft = instance_place(x-(1*image_xscale),y,oEnemy);
+		
+		if(enemyHitRight)
+		{
+			TakeDamage(1,2.75,3.5,true);
+			dashing = false;
+			airDash = false;
+			if(instance_exists(oPlayerDashParticle)) instance_destroy(dashParticles);
+		}
+		else if(enemyHitLeft)
+		{
+			TakeDamage(1,2.75,-3.5,true);
+			dashing = false;
+			airDash = false;
+			if(instance_exists(oPlayerDashParticle)) instance_destroy(dashParticles);
+		}
+	
+		mask_index = sPlayer;
+	}
 
 	// Horizontal Collision
 	if (place_meeting(x+hsp,y,oWall))
@@ -323,7 +347,7 @@ else
 // Animation
 if(hit)
 {
-	sprite_index = sPlayerPlaceholderHit;	
+	sprite_index = sPlayerHurt;	
 }
 else if(airborne)
 {
