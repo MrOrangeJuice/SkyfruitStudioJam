@@ -1,6 +1,6 @@
 /// @description move
 
-if(!global.paused)
+if(!global.paused && !global.hitPause)
 {
 	x += xspeed * xdir;
 }

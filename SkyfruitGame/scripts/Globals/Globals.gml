@@ -5,6 +5,7 @@ global.maxHealth = 10;
 global.health = 10;
 global.timesHit = 0;
 global.resultsTime = 30;
+global.controller = 0;
 
 global.musVolume = 0.5;
 global.sndVolume = 0.5;
