@@ -6,7 +6,25 @@ global.health = 10;
 global.timesHit = 0;
 global.resultsTime = 30;
 
+global.musVolume = 0.5;
+global.sndVolume = 0.5;
+
+enum CHAPTER {
+	NOTHING,
+	ONE_INTRO,
+	ONE_BATTLE,
+	TWO_CONVO, // Isla
+	TWO_BATTLE,
+	THREE_CONVO, // Clyde
+	THREE_BATTLE,
+	FOUR_CONVO, // Aluminum
+	BOSS_BATTLE,
+	FINAL_CONVO
+}
+
+global.storyBeat = CHAPTER.NOTHING;
 global.upgradesList = []; // stores upgrades the player has bought
+
 
 // Scene state flags
 global.islaKiss = false;

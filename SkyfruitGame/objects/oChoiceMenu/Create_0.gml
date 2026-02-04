@@ -3,14 +3,15 @@ if live_call() return live_result;
 t = 0;
 grace_frames = 30;
 alpha = 0;
+pause_timer = 0;
 
 sprite_index = sTextbox;
 
 // Initialize variables
 pos = 0;
-up = 0;
-down = 0;
-interact = 0;
+key_up = 0;
+key_down = 0;
+key_select = 0;
 options = [];
 for (var i = 0; i < array_length(choices); i++) {
 	

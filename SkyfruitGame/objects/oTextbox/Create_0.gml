@@ -1,6 +1,8 @@
 if live_call() return live_result;
 
 depth = TEXTBOX_DEPTH;
+interact = false;
+pause_timer = 0;
 
 /// @desc Default textbox params
 text = "Woah";

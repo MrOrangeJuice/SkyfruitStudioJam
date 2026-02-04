@@ -1,12 +1,29 @@
 if live_call() return live_result;
 
+interact = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space);
+if (gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(4,gp_face1))
+{
+	interact = 1;
+	global.controller = 1;
+}
+
+// Handle pausing
+if (global.paused) {
+	pause_timer = 5;
+	exit;
+}
+if (pause_timer > 0) {
+	pause_timer--;
+	exit;
+}
+
+
 frame++;
 text_pause_timer--;
 text_pause_voice_timer--;
 
-
 // Skip text (do this before playing audio)
-if (keyboard_check_pressed(vk_space) or keyboard_check(ord("C"))) {
+if (interact or keyboard_check(ord("C"))) {
 	char_count = text_length;
 }
 
