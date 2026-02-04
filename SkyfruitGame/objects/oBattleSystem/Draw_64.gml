@@ -37,7 +37,7 @@ if (room != rTitle)
 	
 	// Draw gifts
 	giftX = SCREEN_W - 20;
-	giftY = 2;
+	giftY = 16;
 	textOffsetX = 13;
 	textOffsetY = 1;
 	draw_sprite(
@@ -54,6 +54,16 @@ if (room != rTitle)
 		giftY + textOffsetY,
 		$"x{global.giftCount}"
 	)
+	
+	// Draw enemy UI
+	enemyUIX = SCREEN_W-30;
+	enemyUIY = 8;
+	
+	draw_set_color(#7F0622);
+	draw_sprite(sEnemyUI,0,enemyUIX,enemyUIY);
+	draw_text(enemyUIX+20,enemyUIY-9,"x" + string(instance_number(oCowboy)));
+	
+	draw_set_color(#16171A);
 	
 	// Draw Pause Menu
 	if(global.paused)
