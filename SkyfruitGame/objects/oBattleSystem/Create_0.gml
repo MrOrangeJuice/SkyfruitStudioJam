@@ -6,4 +6,15 @@ healthTextScale = 1;
 enemyUITextScale = 1;
 pauseOption = 0;
 
+resultsSpawned = false;
+resultsY = -100;
+resultsYTarget = -100;
+resultsFrame = 0;
+
+reward = 20;
+bonus = 20;
+curBonus = bonus;
+displayReward = false;
+displayBonus = false;
+
 display_set_gui_size(SCREEN_W,SCREEN_H);

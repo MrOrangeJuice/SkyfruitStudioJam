@@ -6,6 +6,7 @@ function TakeDamage(argument0,argument1,argument2,argument3)
 		with (oPlayer)
 		{
 			audio_play_sound(snd_PlayerHit,5,false);
+			global.timesHit++;
 			if (room != rTitle) 
 			{
 				global.health -= argument0;

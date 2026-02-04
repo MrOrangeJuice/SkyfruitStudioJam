@@ -63,6 +63,20 @@ if (room != rTitle)
 	draw_sprite(sEnemyUI,0,enemyUIX,enemyUIY);
 	draw_text(enemyUIX+20,enemyUIY-9,"x" + string(instance_number(oCowboy)));
 	
+	// Draw results
+	draw_sprite(sWanted,resultsFrame,128,resultsY);
+	draw_set_halign(fa_right);
+	if(displayReward) 
+	{
+		draw_text(183,resultsY+59,reward);
+		draw_sprite(sGiftSmall,0,167,resultsY+65);
+	}
+	if(displayBonus) 
+	{
+		draw_text(183,resultsY+67,curBonus);
+		draw_sprite(sGiftSmall,0,167,resultsY+73);
+	}
+	draw_set_halign(fa_center);
 	draw_set_color(#16171A);
 	
 	// Draw Pause Menu

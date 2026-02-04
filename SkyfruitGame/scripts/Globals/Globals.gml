@@ -3,6 +3,8 @@ global.paused = false;
 global.hitPause = false;
 global.maxHealth = 10;
 global.health = 10;
+global.timesHit = 0;
+global.resultsTime = 30;
 
 global.upgradesList = []; // stores upgrades the player has bought
 

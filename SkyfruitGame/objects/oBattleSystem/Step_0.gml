@@ -54,6 +54,27 @@ if(key_pause)
 	}
 }
 
+resultsY = lerp(resultsY, resultsYTarget, 0.2);
+
+if(instance_number(oCowboy) <= 0 && !resultsSpawned)
+{
+	if(global.resultsTime <= 0)
+	{
+		resultsSpawned = true;
+		resultsYTarget = 24;
+		alarm[0] = room_speed * 1;
+		audio_play_sound(snd_GunClick,5,false);
+	
+		// Calculate bonus
+		curBonus = bonus - (global.timesHit * 2);
+		if(curBonus < 0) curBonus = 0;
+	}
+	else
+	{
+		global.resultsTime--;	
+	}
+}
+
 if(global.paused)
 {
 	if(key_up)
