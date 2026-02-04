@@ -2,7 +2,7 @@ global.giftCount = 0;
 global.paused = false;
 global.hitPause = false;
 global.maxHealth = 10;
-global.health = 7;
+global.health = 10;
 
 global.musVolume = 0.5;
 global.sndVolume = 0.5;

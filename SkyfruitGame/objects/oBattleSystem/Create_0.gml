@@ -6,6 +6,7 @@ SetVolumes(); // initialize volumes
 audio_group_load(audiogroup_Music);
 
 healthTextScale = 1;
+enemyUITextScale = 1;
 pauseOption = 0;
 
 display_set_gui_size(SCREEN_W,SCREEN_H);
