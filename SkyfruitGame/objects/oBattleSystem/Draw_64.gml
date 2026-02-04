@@ -63,6 +63,12 @@ if (room != rTitle)
 	draw_sprite(sEnemyUI,0,enemyUIX,enemyUIY);
 	draw_text(enemyUIX+20,enemyUIY-9,"x" + string(instance_number(oCowboy)));
 	
+	// Draw continue
+	if(displayContinue)
+	{
+		draw_sprite(sContinue,global.controller,140,continueY);	
+	}
+	
 	// Draw results
 	draw_sprite(sWanted,resultsFrame,128,resultsY);
 	draw_set_halign(fa_right);

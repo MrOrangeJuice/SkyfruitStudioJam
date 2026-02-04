@@ -13,11 +13,14 @@ resultsSpawned = false;
 resultsY = -100;
 resultsYTarget = -100;
 resultsFrame = 0;
+continueY = 72;
+continueYTarget = 72;
 
 reward = 20;
 bonus = 20;
 curBonus = bonus;
 displayReward = false;
 displayBonus = false;
+displayContinue = false;
 
 display_set_gui_size(SCREEN_W,SCREEN_H);
