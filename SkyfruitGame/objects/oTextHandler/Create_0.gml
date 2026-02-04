@@ -3,6 +3,8 @@ page_array = NONE; // Array of pages loaded into the handler
 active_textbox = noone;
 active_choice_menu = noone;
 
+interact = false;
+
 page = 0;
 page_rendered = false;
 next_page_choice = false;
@@ -90,7 +92,7 @@ StateReadPage = function() {
 
 StateAwaitNextPage = function() {
 
-	if (keyboard_check_pressed(vk_space) or keyboard_check(ord("C"))) {
+	if (interact or keyboard_check(ord("C"))) {
 
 		// Textbox is over
 		instance_destroy(active_textbox);

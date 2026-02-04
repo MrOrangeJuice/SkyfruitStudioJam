@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Globals",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Save and Load",
+    "path":"folders/Save and Load.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

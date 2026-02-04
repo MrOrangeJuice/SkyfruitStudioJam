@@ -1,3 +1,3 @@
 if live_call() return live_result;
 
-with (oTextbox) { x += 10; }
+room_goto(rTitle);

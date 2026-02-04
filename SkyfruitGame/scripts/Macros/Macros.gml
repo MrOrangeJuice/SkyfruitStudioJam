@@ -8,3 +8,7 @@
 #macro UP 1
 #macro LEFT 2
 #macro DOWN 3
+
+#macro PALETTE_YELLOW #ffd100
+#macro PALETTE_GREY #234975
+#macro PALETTE_BLACK #16171a

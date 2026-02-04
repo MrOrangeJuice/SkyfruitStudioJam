@@ -1,14 +1,27 @@
+if live_call() return live_result;
 
 key_pause = keyboard_check_pressed(vk_escape);
 key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
+key_left = keyboard_check_pressed(ord("A")) || keyboard_check_pressed(vk_left);
+key_right = keyboard_check_pressed(ord("D")) || keyboard_check_pressed(vk_right);
 key_select = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space);
 
-if (key_up) || (key_down) ||  (key_select) || (key_pause)
+if (key_left) || (key_right) || (key_up) || (key_down) || (key_select) || (key_pause)
 {
 	global.controller = 0;
 }
+if (gamepad_axis_value(0,gp_axislh) < -0.2 || gamepad_button_check_pressed(0,gp_padl) || gamepad_axis_value(4,gp_axislh) < -0.2 || gamepad_button_check_pressed(4,gp_padl))
+{
+	key_left = 1;
+	global.controller = 1;
+}
 
+if (gamepad_axis_value(0,gp_axislh) > 0.2 || gamepad_button_check_pressed(0,gp_padr) || gamepad_axis_value(4,gp_axislh) > 0.2 || gamepad_button_check_pressed(4,gp_padr))
+{
+	key_right = 1;
+	global.controller = 1;
+}
 if ((gamepad_axis_value(0,gp_axislv) < -0.4 && analogUpPrev == false) || gamepad_button_check_pressed(0,gp_padu) || (gamepad_axis_value(4,gp_axislv) < -0.4 && analogUpPrevD == false) || gamepad_button_check_pressed(4,gp_padu))
 {
 	key_up = 1;
@@ -54,8 +67,11 @@ if(key_pause)
 	}
 }
 
+
+// Pause menu
 if(global.paused)
 {
+	/*
 	if(key_up)
 	{
 		audio_play_sound(snd_MenuMove,5,false);
@@ -75,6 +91,14 @@ if(global.paused)
 			pauseOption = 0;	
 		}
 	}
+	*/
+	
+	
+	// Consider this helpful trick
+	var _oldPauseOption = pauseOption;
+	pauseOption = (pauseOption + key_down - key_up + 5) % 5;
+	if (_oldPauseOption != pauseOption) audio_play_sound(snd_MenuMove,5,false);
+	
 	
 	if(key_select)
 	{
@@ -89,13 +113,32 @@ if(global.paused)
 					oPlayer.canJump = false;	
 				}
 				pauseOption = 0;
-				global.paused = false;	
+				global.paused = false;
+				keyboard_clear(vk_space);
 				break;
 			case 1:
 				window_set_fullscreen(!window_get_fullscreen());
 				break;
 			case 2:
 				SlideTransition(TRANS_MODE.GOTO, rTitle);
+				break;
+			default:
+				break;
+		}
+	}
+	if (key_right or key_left)
+	{
+		switch(pauseOption)
+		{
+			case 3:
+				global.musVolume = clamp(global.musVolume + 0.2*(key_right - key_left), 0, 1);
+				SetVolumes();
+				audio_play_sound(snd_GunClick,1,false);
+				break;
+			case 4:
+				global.sndVolume = clamp(global.sndVolume  + 0.2*(key_right - key_left), 0, 1);
+				SetVolumes();
+				audio_play_sound(snd_GunClick,1,false);
 				break;
 		}
 	}

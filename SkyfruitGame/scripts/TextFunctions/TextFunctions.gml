@@ -162,7 +162,7 @@ function draw_text_border_ext(_x, _y, _str, _sep, _width, _scale = 1, _colour = 
 	draw_text_ext_transformed_color(_x, _y, _str, _sep, _width, _scale, _scale, 0, _colour, _colour, _colour, _colour, _alpha);
 }
 function draw_text_border(_x, _y, _str) {
-	draw_text_border_ext(_x, _y, _str, 99, 99);
+	draw_text_border_ext(_x, _y, _str, 999, 999);
 }
 
 
