@@ -2,6 +2,7 @@
 
 function SaveGame() {
 	var _string = json_stringify({
+		giftCount: global.giftCount,
 		storyBeat: global.storyBeat,
 		upgradesList: global.upgradesList,
 	}, true);
@@ -28,6 +29,7 @@ function LoadGame() {
 		return -1;
 	}
 
+	global.giftCount = struct_get(_json, "giftCount");
 	global.storyBeat = struct_get(_json, "storyBeat");
 	global.upgradesList = struct_get(_json, "upgradesList");
 	return 0;

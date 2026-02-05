@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oPorVillin",
+  "%Name":"oPorLeftClyde",
   "eventList":[],
   "managed":true,
-  "name":"oPorVillin",
+  "name":"oPorLeftClyde",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pPortrait","path":"objects/pPortrait/pPortrait.yy",},"propertyId":{"name":"left","path":"objects/pPortrait/pPortrait.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pPortrait","path":"objects/pPortrait/pPortrait.yy",},"propertyId":{"name":"left","path":"objects/pPortrait/pPortrait.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
   ],
   "parent":{
     "name":"Portraits",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPorVillin",
-    "path":"sprites/sPorVillin/sPorVillin.yy",
+    "name":"sPorClyde",
+    "path":"sprites/sPorClyde/sPorClyde.yy",
   },
   "spriteMaskId":null,
   "visible":true,

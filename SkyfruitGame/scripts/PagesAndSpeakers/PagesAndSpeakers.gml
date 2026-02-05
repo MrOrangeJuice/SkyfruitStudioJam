@@ -17,7 +17,7 @@ function Page(_speaker, _text) {
     }
 }
 
-function CodePage(_code, _args) {
+function CodePage(_code, _args = []) {
     return {
 		type: PAGE_TYPE.CODE,
 		code: _code,
@@ -67,13 +67,17 @@ function Speaker(_name, _voice, _portrait) {
 #macro spk_johnny "spkJohnny"
 #macro spk_isla "spkIsla"
 #macro spk_clyde "spkClyde"
+#macro spk_left_clyde "spkLeftClyde"
 #macro spk_alloy "spkAlloy"
 #macro spk_villin "spkVillin"
+#macro spk_mustard "spkMustard"
 #macro spk_none "spkNone"
 
-global.spkNone = Speaker(NONE, NONE, NONE);
+global.spkNone = Speaker(NONE, vTest, NONE);
 global.spkJohnny = Speaker("Johnny", vTest, oPorJohnny);
 global.spkIsla = Speaker("Isla", vTest, oPorIsla);
 global.spkClyde = Speaker("Clyde", vTest, oPorClyde);
+global.spkLeftClyde = Speaker("Clyde", vTest, oPorLeftClyde);
 global.spkAlloy = Speaker("Alloy", vTest, oPorAlloy);
 global.spkVillin = Speaker("Villin", vTest, oPorVillin);
+global.spkMustard = Speaker("Mustard", vMustard, oPorMustard);

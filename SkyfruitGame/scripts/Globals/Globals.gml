@@ -1,4 +1,3 @@
-global.giftCount = 0;
 global.paused = false;
 global.hitPause = false;
 global.maxHealth = 10;
@@ -18,11 +17,12 @@ enum CHAPTER {
 	TWO_BATTLE,
 	THREE_CONVO, // Clyde
 	THREE_BATTLE,
-	FOUR_CONVO, // Aluminum
+	FOUR_CONVO, // Alloy
 	BOSS_BATTLE,
 	FINAL_CONVO
 }
 
+global.giftCount = 0;
 global.storyBeat = CHAPTER.NOTHING;
 global.upgradesList = []; // stores upgrades the player has bought
 

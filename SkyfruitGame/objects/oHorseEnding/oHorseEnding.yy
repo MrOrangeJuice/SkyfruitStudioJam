@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oPorVillin",
-  "eventList":[],
-  "managed":true,
-  "name":"oPorVillin",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pPortrait","path":"objects/pPortrait/pPortrait.yy",},"propertyId":{"name":"left","path":"objects/pPortrait/pPortrait.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+  "%Name":"oHorseEnding",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
+  "managed":true,
+  "name":"oHorseEnding",
+  "overriddenProperties":[],
   "parent":{
     "name":"Portraits",
     "path":"folders/Scene System/Portraits.yy",
   },
-  "parentObjectId":{
-    "name":"pPortrait",
-    "path":"objects/pPortrait/pPortrait.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPorVillin",
-    "path":"sprites/sPorVillin/sPorVillin.yy",
+    "name":"sHorseEnding",
+    "path":"sprites/sHorseEnding/sHorseEnding.yy",
   },
   "spriteMaskId":null,
   "visible":true,

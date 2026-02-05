@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oPorVillin",
+  "%Name":"oPorMustard",
   "eventList":[],
   "managed":true,
-  "name":"oPorVillin",
+  "name":"oPorMustard",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pPortrait","path":"objects/pPortrait/pPortrait.yy",},"propertyId":{"name":"left","path":"objects/pPortrait/pPortrait.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
   ],
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPorVillin",
-    "path":"sprites/sPorVillin/sPorVillin.yy",
+    "name":"sPorMustard",
+    "path":"sprites/sPorMustard/sPorMustard.yy",
   },
   "spriteMaskId":null,
   "visible":true,
