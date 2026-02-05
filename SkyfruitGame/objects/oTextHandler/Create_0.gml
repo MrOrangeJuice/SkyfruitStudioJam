@@ -25,6 +25,9 @@ StateAwaiting = function() {
 
 StateHandleNextPage = function() {
 
+	// Wait for the correct room and transition to end
+	if (room != rScene or instance_exists(oTransition)) { return; }
+
 	// Last page
 	if (page >= array_length(page_array)) {
 		

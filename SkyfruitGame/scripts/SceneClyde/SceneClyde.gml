@@ -1,5 +1,6 @@
 scene_clyde = {
 	clyde_1: [
+		Page(spk_none, "....."),
 		CodePage(PorEnter, [oPorJohnny]),
 		Page(spk_johnny, "Knock knock."),
 		CodePage(PorEnter, [oPorClyde]),

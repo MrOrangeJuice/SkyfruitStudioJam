@@ -50,20 +50,17 @@ if(gamepad_button_check_pressed(0,gp_start) || gamepad_button_check_pressed(1,gp
 
 if(key_pause)
 {
-	if(room != rTitle)
+	if(global.paused)
 	{
-		if(global.paused)
-		{
-			audio_play_sound(snd_PauseOut,5,false);
-			// Reset pause menu
-			pauseOption = 0;
-			global.paused = false;	
-		}
-		else if(!global.paused)
-		{
-			audio_play_sound(snd_PauseIn,5,false);
-			global.paused = true;	
-		}
+		audio_play_sound(snd_PauseOut,5,false);
+		// Reset pause menu
+		pauseOption = 0;
+		global.paused = false;	
+	}
+	else if(!global.paused)
+	{
+		audio_play_sound(snd_PauseIn,5,false);
+		global.paused = true;	
 	}
 }
 
@@ -143,6 +140,7 @@ if(global.paused)
 				break;
 			case 2:
 				SlideTransition(TRANS_MODE.GOTO, rTitle);
+				global.paused = false;
 				break;
 			default:
 				break;

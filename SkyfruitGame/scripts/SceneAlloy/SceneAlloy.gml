@@ -1,5 +1,6 @@
 scene_alloy = {
 	alloy_1: [
+		Page(spk_none, "....."),
 		CodePage(PorEnter, [oPorJohnny]),
 		Page(spk_johnny, "Alloy! Open up. I know what you're doing."),
 		CodePage(PorEnter, [oPorAlloy]),

@@ -1,3 +1,4 @@
+StopMusic(true);
 if(resultsFrame < 5)
 {
 	ScreenShake(2,10);

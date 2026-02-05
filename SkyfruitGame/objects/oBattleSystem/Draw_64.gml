@@ -66,54 +66,9 @@ if (room != rTitle and room != rScene)
 	draw_set_halign(fa_center);
 	draw_set_color(#16171A);
 	
-	// Draw Pause Menu
-	if(global.paused)
-	{
-		pauseOptions = [
-			"Resume",
-			"Fullscreen",
-			"Main Menu",
-			"Music Vol",
-			"SFX Vol",
-		]
-		
-		
-		// Draw options
-		draw_sprite_stretched(sPauseMenu,pauseOption,112,32,96, 112);
-		for (var i = 0; i < array_length(pauseOptions); i++) {
-			
-			// Text alignment
-			draw_set_halign(fa_middle);
-
-			// Augment for selector position
-			var _colour = (i == pauseOption ? c_white : PALETTE_YELLOW);
-			var _text = (i == pauseOption ? string_concat(">", pauseOptions[i], "<") : pauseOptions[i]);
-			var _y = 42 + 16*i + 10*(i>2);
-			
-			draw_text_border_ext(
-				SCREEN_W/2 - 17*(i==3) - 21*(i==4),
-				_y,
-				_text,
-				999,
-				999,
-				1,
-				_colour,
-				1
-			)
-			
-			// Sliders
-			if (i == 3 or i == 4) {
-				draw_sprite(
-					sVolume,
-					(i == 3 ? round(global.musVolume/0.2) : round(global.sndVolume/0.2)),
-					176,
-					_y + 5
-				)
-			}
-		}
-		
-	}
 }
+
+
 
 if (room != rTitle) {
 	
@@ -136,4 +91,54 @@ if (room != rTitle) {
 		giftY + textOffsetY,
 		$"x{global.giftCount}"
 	)
+}
+
+// Pause menu
+
+// Draw Pause Menu
+if(global.paused)
+{
+	pauseOptions = [
+		"Resume",
+		"Fullscreen",
+		"Main Menu",
+		"Music Vol",
+		"SFX Vol",
+	]
+		
+		
+	// Draw options
+	draw_sprite_stretched(sPauseMenu,pauseOption,112,32,96, 112);
+	for (var i = 0; i < array_length(pauseOptions); i++) {
+			
+		// Text alignment
+		draw_set_halign(fa_middle);
+
+		// Augment for selector position
+		var _colour = (i == pauseOption ? c_white : PALETTE_YELLOW);
+		var _text = (i == pauseOption ? string_concat(">", pauseOptions[i], "<") : pauseOptions[i]);
+		var _y = 42 + 16*i + 10*(i>2);
+			
+		draw_text_border_ext(
+			SCREEN_W/2 - 17*(i==3) - 21*(i==4),
+			_y,
+			_text,
+			999,
+			999,
+			1,
+			_colour,
+			1
+		)
+			
+		// Sliders
+		if (i == 3 or i == 4) {
+			draw_sprite(
+				sVolume,
+				(i == 3 ? round(global.musVolume/0.2) : round(global.sndVolume/0.2)),
+				176,
+				_y + 5
+			)
+		}
+	}
+		
 }

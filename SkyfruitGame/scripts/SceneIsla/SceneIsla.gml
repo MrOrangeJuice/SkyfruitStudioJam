@@ -1,5 +1,6 @@
 scene_isla = {
 	isla_1: [
+		Page(spk_none, "....."),
 		CodePage(PorEnter, [oPorJohnny]),
 		Page(spk_johnny, "Well, here goes nothin'."),
 		Page(spk_johnny, "Knock knock."),
