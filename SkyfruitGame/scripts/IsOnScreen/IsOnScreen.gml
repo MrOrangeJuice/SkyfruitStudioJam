@@ -4,9 +4,9 @@
 // y, x
 function IsOnScreen(argument0, argument1)
 {
-	if(instance_exists(oCamera))
+	if(instance_exists(oPlayer))
 	{
-		if(argument0 > oCamera.y - 120 && argument0 < oCamera.y + 120 && argument1 > oCamera.x - 200 && argument0 < oCamera.x + 200)
+		if(argument1 > oCamera.x - 240 && argument1 < oCamera.x + 240)
 		{
 			return true;	
 		}

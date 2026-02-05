@@ -28,4 +28,14 @@ displayContinue = false;
 
 global.enemiesLeft = 20;
 
+switch(room)
+{
+	case rTutorial:
+		global.enemiesLeft = 2;
+		break;
+	case rLevel1:
+		global.enemiesLeft = 20;
+		break;
+}
+
 display_set_gui_size(SCREEN_W,SCREEN_H);

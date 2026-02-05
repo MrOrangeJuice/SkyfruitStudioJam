@@ -11,4 +11,12 @@ curBonus = bonus;
 displayReward = false;
 displayBonus = false;
 
-global.enemiesLeft = 20;
+switch(room)
+{
+	case rTutorial:
+		global.enemiesLeft = 2;
+		break;
+	case rLevel1:
+		global.enemiesLeft = 20;
+		break;
+}
