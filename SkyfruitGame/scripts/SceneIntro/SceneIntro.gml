@@ -16,7 +16,6 @@ scene_intro = {
 		Page(spk_johnny, "Mustard! |S|Mustard, my horse!/S/ The horse I go everywhere with!"),
 		Page(spk_johnny, "Where are ya? We're best buddies, ever'one knows that! It's a well-established cowboy trope!"),
 		Page(spk_johnny, "Alright. Tactics, Johnny."),
-		Page(spk_johnny, ),
 		ChoicePage(
 			Choice("Sing Mustard's song", "song"),
 			Choice("Shoot the air", "gun"),
