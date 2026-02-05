@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPorClyde",
-    "path":"sprites/sPorClyde/sPorClyde.yy",
+    "name":"sPorVillin",
+    "path":"sprites/sPorVillin/sPorVillin.yy",
   },
   "spriteMaskId":null,
   "visible":true,

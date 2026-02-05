@@ -71,7 +71,7 @@ function Speaker(_name, _voice, _portrait) {
 #macro spk_villin "spkVillin"
 #macro spk_none "spkNone"
 
-global.spkNone = Speaker(NONE, NONE, NONE);
+global.spkNone = Speaker(NONE, vTest, NONE);
 global.spkJohnny = Speaker("Johnny", vTest, oPorJohnny);
 global.spkIsla = Speaker("Isla", vTest, oPorIsla);
 global.spkClyde = Speaker("Clyde", vTest, oPorClyde);
