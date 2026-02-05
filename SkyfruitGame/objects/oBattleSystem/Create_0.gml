@@ -23,4 +23,6 @@ displayReward = false;
 displayBonus = false;
 displayContinue = false;
 
+global.enemiesLeft = 20;
+
 display_set_gui_size(SCREEN_W,SCREEN_H);

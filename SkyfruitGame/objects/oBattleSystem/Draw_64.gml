@@ -61,7 +61,7 @@ if (room != rTitle)
 	
 	draw_set_color(#7F0622);
 	draw_sprite(sEnemyUI,0,enemyUIX,enemyUIY);
-	draw_text(enemyUIX+20,enemyUIY-9,"x" + string(instance_number(oCowboy)));
+	draw_text(enemyUIX+20,enemyUIY-9,"x" + string(global.enemiesLeft));
 	
 	// Draw continue
 	if(displayContinue)

@@ -10,3 +10,5 @@ bonus = 20;
 curBonus = bonus;
 displayReward = false;
 displayBonus = false;
+
+global.enemiesLeft = 20;
