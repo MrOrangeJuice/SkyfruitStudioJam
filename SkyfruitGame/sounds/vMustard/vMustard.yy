@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"vMustard",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.21875283,
+  "exportDir":"",
+  "name":"vMustard",
+  "parent":{
+    "name":"Voices",
+    "path":"folders/Dialogue System/Voices.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"vMustard.ogg",
+  "volume":0.43,
+}
