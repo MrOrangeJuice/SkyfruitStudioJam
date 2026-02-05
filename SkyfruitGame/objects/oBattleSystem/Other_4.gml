@@ -19,4 +19,7 @@ switch(room)
 	case rLevel1:
 		global.enemiesLeft = 20;
 		break;
+	case rLevel2:
+		global.enemiesLeft = 25;
+		break;
 }
