@@ -30,7 +30,7 @@ if (n_options > 4) {
 // Creating the textboxes (need textboxes for coloured words, etc)
 textboxes = [];
 
-textbox_w = 160;
+textbox_w = 150;
 textbox_h = 18;
 textbox_y = function(_pos) {
 	return  20 + (textbox_h + 8)*_pos;

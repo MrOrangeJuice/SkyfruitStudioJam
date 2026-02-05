@@ -9,7 +9,7 @@ if (center_text) {
 
 // Draw the names
 if (name != NONE and !instance_exists(oChoiceMenu)) {
-	name_offset = 36;
+	name_offset = 64;
 	name_w = string_width(name) + 12;
 	name_h = 23;
 	name_x = (left ? x + name_offset : x + textbox_w - name_offset - name_w);
@@ -85,8 +85,8 @@ if (icon != NONE) {
 	draw_sprite(
 		icon,
 		0,
-		x + textbox_w - 16,
-		y + textbox_h - 16
+		x + textbox_w - 14,
+		y + textbox_h - 17
 	)
 }
 
@@ -96,12 +96,12 @@ if (gift_req != 0) {
 		sGift,
 		0,
 		x + textbox_w,
-		y + textbox_h
+		y + textbox_h - 8
 	)
 	draw_set_halign(fa_left);
 	draw_text_border(
 		x + textbox_w + 10,
-		y + textbox_h + 2,
+		y + textbox_h - 6,
 		$"x{gift_req}"
 	)
 }

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPorIslaHands",
-    "path":"sprites/sPorIslaHands/sPorIslaHands.yy",
+    "name":"sPorClyde",
+    "path":"sprites/sPorClyde/sPorClyde.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -5,8 +5,8 @@ onscreen = false;
 
 // Constants
 offscreen_dist = 80;
-onscreen_dist = 32;
-base_y = 150;
+onscreen_dist = 48;
+base_y = 130;
 
 // Initial values
 image_xscale = (left ? 1 : -1); // portraits face right by default

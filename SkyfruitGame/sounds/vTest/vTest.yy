@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.13986395,
+  "duration":0.23655328,
   "exportDir":"",
   "name":"vTest",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"vTest.wav",
-  "volume":0.04,
+  "soundFile":"vTest.ogg",
+  "volume":1.0,
 }

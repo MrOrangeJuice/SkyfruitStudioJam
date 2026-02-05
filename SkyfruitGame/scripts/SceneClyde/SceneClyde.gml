@@ -28,7 +28,7 @@ scene_clyde = {
 		GotoPage("clyde_2"),
 	],
 	clothes: [
-		Page(spk_johnny, "I'm lovin' your coat, Clyde. So in-teeee-lectual, so well put together."),
+		Page(spk_johnny, "I'm lovin' your coat, Clyde. So |V|in-teeee-lectual,/V/ so well put together."),
 		Page(spk_johnny, "You're really puttin' on your best for me."),
 		GotoPage("clyde_2"),
 
@@ -47,7 +47,7 @@ scene_clyde = {
 	vultures: [
 		Page(spk_clyde, "We were on a mission together, you and I."),
 		Page(spk_clyde, "A seven-day stakeout, miles from town."),
-		Page(spk_clyde, "We were lying in wait for the chance to steal the |B|Crown Jewel|W| of the Big Donut."),
+		Page(spk_clyde, "We were lying in wait for the chance to steal the |Y|Crown Jewel|W| of the Big Donut."),
 		Page(spk_johnny, "Aw, geez. 'course I remember! You coulda written a movie 'bout that heist!"),
 		Page(spk_johnny, "Good times, ey Clyde?"),
 		Page(spk_clyde, "Not so good times, Johnny. We ran outta food. There was noone 'round for miles."),
@@ -71,6 +71,7 @@ scene_clyde = {
 		Page(spk_clyde, "No actually. You pinned it all on me. Ran outta that house and lied to the Cowboy-Cops."),
 		Page(spk_clyde, "Who does that, Johnny? Who lies to the Cowboy-Cops on a Wednesday afternoon like that?"),
 		Page(spk_clyde, "Six months in Cowboy-Jail, I had."),
+		GotoPage("clyde_3"),
 	],
 	clyde_3: [
 		Page(spk_clyde, "It was lame what you did, Johnny. Real lame."),
@@ -140,7 +141,8 @@ scene_clyde = {
 		GotoPage("clyde_5"),
 	],
 	clyde_5: [
-		Page(spk_clyde, "When you're not horsin' around with you're cowboy act, stealin' hearts and stealin' coin, people around the Big Donut sometimes have REAL problems."),
+		Page(spk_clyde, "When you're not horsin' around with you're cowboy act, stealin' hearts and stealin' coin..."),
+		Page(spk_clyde, "...people around the Big Donut sometimes have REAL problems."),
 		Page(spk_clyde, "Personal problems."),
 		Page(spk_clyde, "I talk to people about their feelings and I don't judge 'em. That's all."),
 		Page(spk_clyde, "Heck, sometimes they leave feeling better than when they arrived."),
@@ -228,7 +230,6 @@ scene_clyde = {
 		Page(spk_none, "Clyde puts his arms around you and gets ready to lift you off the ground."),
 		Page(spk_none, "|V|CRACK./V/"),
 		Page(spk_johnny, "HOO-BOY, that felt good."),
-		Page(spk_clyde, ),
 		CodePage(GetUpgrade, [UPGRADES.MOVE_SPEED_UP]),
 		Page(spk_none, "You're slick for that. Movement speed increased."),
 		GotoPage("clyde_return_point"),

@@ -18,8 +18,6 @@ scene_alloy = {
 		Page(spk_johnny, "..."),
 		Page(spk_johnny, "Yeah I don't rem'ber that ever happening."),
 		Page(spk_alloy, "Of course you do not. Because of what happened next."),
-
-		Page(spk_alloy, ),
 		ChoicePage(
 			Choice("You flirted mercilessly", "flirt"),
 			Choice("You were too slick", "slick"),
@@ -58,21 +56,23 @@ scene_alloy = {
 		Page(spk_johnny, "I have no idea what's going on."),
 		Page(spk_johnny, "But if pleasin' you is what it takes to get to my horse..."),
 		Page(spk_johnny, "Then Johnny's gonna hafta bust out the ol' slick once again."),
+		GotoPage("alloy_return_point"),
 	],
 	challenge: [
 		Page(spk_johnny, "Challenge accepted."),
 		Page(spk_johnny, "If pleasin' you is what it takes to get my horse back..."),
 		Page(spk_johnny, "Then |S|please/S/ you I shall!"),
+		GotoPage("alloy_return_point"),
 	],
 	
 	alloy_return_point: [
 		Page(spk_alloy, "Compliment me, you fool."),
 		ChoicePage(
-			Choice("I'm good to go", "clyde_final"),
-			Choice("Your hair is cute!", "hair", 7, sExtraDash, "alloyHair"),
-			Choice("Your hat is adorable!", "hat", 7, sHealthUp, "alloyHat"),
-			Choice("Your spellbook is so well-crafted!", "spellbook", 7, sDamageUp, "alloySpellbook"),
-			Choice("Your plan has worked on me perfectly!", "plan", 7, sFireSpeedUp, "alloyPlan"),
+			Choice("I'm good to go", "clyde_final", "alloy_final"),
+			Choice("Your hair is cute", "hair", 7, sExtraDash, "alloyHair"),
+			Choice("Your hat is adorable", "hat", 7, sHealthUp, "alloyHat"),
+			Choice("Your spellbook well-crafted", "spellbook", 7, sDamageUp, "alloySpellbook"),
+			Choice("Your plan worked perfectly", "plan", 7, sFireSpeedUp, "alloyPlan"),
 		),
 	],
 	hair: [
