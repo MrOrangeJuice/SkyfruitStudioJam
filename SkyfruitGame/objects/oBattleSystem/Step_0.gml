@@ -5,7 +5,7 @@ key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
 key_left = keyboard_check_pressed(ord("A")) || keyboard_check_pressed(vk_left);
 key_right = keyboard_check_pressed(ord("D")) || keyboard_check_pressed(vk_right);
-key_select = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space);
+key_select = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("P"));
 
 if (key_left) || (key_right) || (key_up) || (key_down) || (key_select) || (key_pause)
 {
@@ -67,10 +67,34 @@ if(key_pause)
 	}
 }
 
+if(displayContinue && key_select && canShiftRooms)
+{
+	canShiftRooms = false;
+	audio_play_sound(snd_GunFire,5,false);
+	switch(room)
+	{
+		case rTutorial:
+			SlideTransition(TRANS_MODE.GOTO,rLevel1);
+			break;
+		case rLevel1:
+			SlideTransition(TRANS_MODE.GOTO,rLevel2);
+			break;
+		case rLevel2:
+			SlideTransition(TRANS_MODE.GOTO,rLevel3);
+			break;
+		case rLevel3:
+			SlideTransition(TRANS_MODE.GOTO,rLevel4);
+			break;
+		case rLevel4:
+			SlideTransition(TRANS_MODE.GOTO,rHorseEnding);
+			break;
+	}
+}
+
 resultsY = lerp(resultsY, resultsYTarget, 0.2);
 continueY = lerp(continueY, continueYTarget, 0.2);
 
-if(global.enemiesLeft <= 0 && !resultsSpawned)
+if(global.enemiesLeft <= 0 && !resultsSpawned && room != rTitle && room != rHorseEnding && room != rScene)
 {
 	if(global.resultsTime <= 0)
 	{

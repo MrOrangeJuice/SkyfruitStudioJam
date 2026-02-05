@@ -4,12 +4,16 @@ resultsSpawned = false;
 resultsY = -100;
 resultsYTarget = -100;
 resultsFrame = 0;
+continueY = 72;
+continueYTarget = 72;
 
 reward = 20;
 bonus = 20;
 curBonus = bonus;
 displayReward = false;
 displayBonus = false;
+displayContinue = false;
+canShiftRooms = true;
 
 switch(room)
 {
@@ -21,5 +25,11 @@ switch(room)
 		break;
 	case rLevel2:
 		global.enemiesLeft = 25;
+		break;
+	case rLevel3:
+		global.enemiesLeft = 30;
+		break;
+	case rLevel4:
+		global.enemiesLeft = 1;
 		break;
 }

@@ -4,7 +4,7 @@ healthTextScale = max(healthTextScale * .95, 1);
 healthToDraw = global.health;
 xMod = 0;
 
-if (room != rTitle and room != rScene)
+if (room != rTitle and room != rScene and room != rHorseEnding)
 {
 	for(i = 0; i < global.maxHealth; i++)
 	{

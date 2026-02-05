@@ -26,6 +26,8 @@ displayReward = false;
 displayBonus = false;
 displayContinue = false;
 
+canShiftRooms = true;
+
 global.enemiesLeft = 20;
 
 switch(room)
@@ -35,6 +37,15 @@ switch(room)
 		break;
 	case rLevel1:
 		global.enemiesLeft = 20;
+		break;
+	case rLevel2:
+		global.enemiesLeft = 25;
+		break;
+	case rLevel3:
+		global.enemiesLeft = 30;
+		break;
+	case rLevel4:
+		global.enemiesLeft = 1;
 		break;
 }
 

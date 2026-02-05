@@ -12,7 +12,8 @@ if(death)
 			instance_create_layer(oPlayer.x,oPlayer.y,"VFX",oParticleExplode);
 		}
 		instance_destroy(oPlayer);
-		SlideTransition(TRANS_MODE.RESTART);
+		SlideTransition(TRANS_MODE.GOTO,room);
+		global.health = global.maxHealth;
 	}
 }
 instance_destroy();
