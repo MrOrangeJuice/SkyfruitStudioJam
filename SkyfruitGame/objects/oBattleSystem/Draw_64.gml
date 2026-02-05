@@ -4,7 +4,7 @@ healthTextScale = max(healthTextScale * .95, 1);
 healthToDraw = global.health;
 xMod = 0;
 
-if (room != rTitle)
+if (room != rTitle and room != rScene)
 {
 	for(i = 0; i < global.maxHealth; i++)
 	{
@@ -34,26 +34,7 @@ if (room != rTitle)
 		}
 		healthToDraw--;
 	}
-	
-	// Draw gifts
-	giftX = SCREEN_W - 20;
-	giftY = 16;
-	textOffsetX = 13;
-	textOffsetY = 1;
-	draw_sprite(
-		sGift,
-		0,
-		giftX,
-		giftY
-	)
-	draw_set_font(fntDaniel);
-	draw_set_valign(fa_top);
-	draw_set_halign(fa_center);
-	draw_text_border(
-		giftX + textOffsetX,
-		giftY + textOffsetY,
-		$"x{global.giftCount}"
-	)
+
 	
 	// Draw enemy UI
 	enemyUIX = SCREEN_W-30;
@@ -132,4 +113,27 @@ if (room != rTitle)
 		}
 		
 	}
+}
+
+if (room != rTitle) {
+	
+	// Draw gifts
+	giftX = SCREEN_W - 20;
+	giftY = 16;
+	textOffsetX = 13;
+	textOffsetY = 1;
+	draw_sprite(
+		sGift,
+		0,
+		giftX,
+		giftY
+	)
+	draw_set_font(fntDaniel);
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_center);
+	draw_text_border(
+		giftX + textOffsetX,
+		giftY + textOffsetY,
+		$"x{global.giftCount}"
+	)
 }

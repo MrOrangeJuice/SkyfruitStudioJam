@@ -2,7 +2,6 @@ if live_call() return live_result;
 
 // Slide portrait on/offscreen
 x = Approach(x, tar_x + move_offset, 0.1, 0.1);
-
 // Jump
 vel_y += acc_y;
 y += vel_y;

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPorIslaHands",
-    "path":"sprites/sPorIslaHands/sPorIslaHands.yy",
+    "name":"sPorAlloy",
+    "path":"sprites/sPorAlloy/sPorAlloy.yy",
   },
   "spriteMaskId":null,
   "visible":true,
