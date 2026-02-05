@@ -1,43 +1,56 @@
 function NextScene() {
 	
+	// Always advance beat and save game
+	if (room != rTitle) global.storyBeat++;
+	SaveGame();
+	ClearTextHandler();
+
+
 	switch (global.storyBeat) {
 	
-	
+		// Startup
+		case CHAPTER.NOTHING:
+			SlideTransition(TRANS_MODE.GOTO, rTutorial);
+			PlayMusic(mus_Tutorial);
+			break;
 		
 		// Tutorial complete
 		case CHAPTER.ONE_INTRO:
-			room_goto(rScene);
-			ClearTextHandler();
+			SlideTransition(TRANS_MODE.GOTO, rScene);
 			LoadText("scene_intro", "intro_1");
 			PlayMusic(mus_MainTheme);
 			break;
 			
 		// Intro complete
 		case CHAPTER.ONE_BATTLE:
+			SlideTransition(TRANS_MODE.GOTO, rLevel1);
+			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// One battle complete
 		case CHAPTER.TWO_CONVO:
-			room_goto(rScene);
-			ClearTextHandler();
+			SlideTransition(TRANS_MODE.GOTO, rScene);
 			LoadText("scene_isla", "isla_1");
 			PlayMusic(mus_Dating);
 			break;
 			
 		// Date with Isla complete
 		case CHAPTER.TWO_BATTLE:
+			SlideTransition(TRANS_MODE.GOTO, rLevel2);
+			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// Second battle complete
 		case CHAPTER.THREE_CONVO:
-			room_goto(rScene);
-			ClearTextHandler();
+			SlideTransition(TRANS_MODE.GOTO, rScene);
 			LoadText("scene_clyde", "clyde_1");
 			PlayMusic(mus_Dating);
 			break;
 
 		// Date with Clyde complete
 		case CHAPTER.THREE_BATTLE:
+			//SlideTransition(TRANS_MODE.GOTO, rLevel3);
+			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// Third battle complete
@@ -50,6 +63,14 @@ function NextScene() {
 
 		// Date with Alloy complete
 		case CHAPTER.BOSS_BATTLE:
+			//SlideTransition(TRANS_MODE.GOTO, rLevel4);
+			PlayMusic(mus_JohnnyFights);
+			break;
+
+		// Boss battle complete
+		case CHAPTER.FINAL_CONVO:
+			SlideTransition(TRANS_MODE.GOTO, rScene);
+			PlayMusic(mus_MainTheme);
 			break;
 	}
 }

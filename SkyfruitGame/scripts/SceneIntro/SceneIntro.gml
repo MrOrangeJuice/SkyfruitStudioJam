@@ -1,5 +1,6 @@
 scene_intro = {
 	intro_1: [
+		Page(spk_none, "....."),
 		CodePage(PorEnter, [oPorJohnny]),
 		Page(spk_johnny, "Heh. What a |V|beeeeeeaa-utiful/V/ mornin'."),
 		Page(spk_johnny, "A beautiful mornin' to be good ol' |Y|Johnny Slick|W|."),

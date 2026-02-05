@@ -19,7 +19,8 @@ enum CHAPTER {
 	THREE_BATTLE,
 	FOUR_CONVO, // Alloy
 	BOSS_BATTLE,
-	FINAL_CONVO
+	FINAL_CONVO,
+	END
 }
 
 global.giftCount = 0;

@@ -19,6 +19,7 @@ main_options = [
 	"Continue",
 	"New Game",
 	"Credits",
+	"Options",
 ]
 save_file_detected = file_exists(SAVE_FILE_NAME);
 
@@ -35,11 +36,25 @@ StateMain = function() {
 		if (sel_pos == 0 and !save_file_detected) { audio_play_sound(snd_GunEmpty, 0, false); }
 		
 		// Load save file
-		if (sel_pos == 0 and save_file_detected) { LoadGame(); }
+		if (sel_pos == 0 and save_file_detected) {
+			var _worked = LoadGame();
+			if (_worked == 0) {
+				audio_play_sound(snd_GunFire, 0, false);
+				StopMusic();
+				NextScene();
+			} else {
+				audio_play_sound(snd_GunEmpty, 0, false);
+			}
+		}
 
 		// Start a new game
 		if (sel_pos == 1) {
+			global.storyBeat = CHAPTER.NOTHING;
+			global.giftCount = 0;
+			global.upgradesList = [];
 			audio_play_sound(snd_GunFire, 0, false);
+			StopMusic();
+			NextScene();
 		}
 		
 		// Go to credits
@@ -47,6 +62,11 @@ StateMain = function() {
 			audio_play_sound(snd_GunFire, 0, false);
 			sel_pos = 0;
 			state = StateCredits;
+		}
+		
+		// Open pause menu
+		if (sel_pos == 3) {
+			global.paused = true;
 		}
 	}
 }

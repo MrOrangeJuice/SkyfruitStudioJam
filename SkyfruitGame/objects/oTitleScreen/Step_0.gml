@@ -1,5 +1,7 @@
 if live_call() return live_result;
 
+if (global.paused) { exit; }
+
 key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
 key_select = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space);

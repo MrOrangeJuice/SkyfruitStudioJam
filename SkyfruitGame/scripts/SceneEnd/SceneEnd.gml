@@ -1,5 +1,6 @@
 scene_end = {
 	end_1: [
+		Page(spk_none, "....."),
 		CodePage(PorEnter, [oPorJohnny]),
 		Page(spk_johnny, "That outta do it."),
 		CodePage(PorEnter, [oPorVillin]),

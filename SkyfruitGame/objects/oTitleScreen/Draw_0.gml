@@ -17,7 +17,7 @@ if (state == StateMain) {
 	draw_set_valign(fa_top);
 	for (var i = 0; i < array_length(main_options); i++) {
 		
-		var _w = 48;
+		var _w = 54;
 		var _y = 100 + 18*i
 		
 		// Box
@@ -27,7 +27,7 @@ if (state == StateMain) {
 			SCREEN_W/2 - _w/2,
 			_y,
 			_w,
-			14
+			18
 		)
 		
 		// Text
