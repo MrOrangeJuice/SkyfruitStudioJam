@@ -290,7 +290,7 @@ if(!global.paused && !global.hitPause)
 	if (key_shoot && shootTimer <= 0)
 	{
 		shootTimer = shootCooldown;
-		bullet = instance_create_layer(x+(13*image_xscale),y+3.5,"Bullets",oBullet);
+		bullet = instance_create_layer(x+(13*image_xscale),y+3,"Bullets",oBullet);
 		if(key_right)
 		{
 			bullet.xdir = 1;

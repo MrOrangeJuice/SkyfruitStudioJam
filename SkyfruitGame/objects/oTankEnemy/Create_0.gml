@@ -2,7 +2,7 @@
 
 event_inherited();
 
-hp = 3;
+hp = 8;
 hsp = 0.5;
 grv = 0.15;
 vsp = 0;
@@ -17,8 +17,8 @@ forward = true;
 
 // Sprites
 idle = sTankEnemyIdle;
-run = sTankEnemyIdle;
-back = sTankEnemyIdle;
-fire = sTankEnemyIdle;
+run = sTankEnemy;
+back = sTankEnemyBack;
+fire = sTankEnemyFire;
 
 image_xscale = dir;

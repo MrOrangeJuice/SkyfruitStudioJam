@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oVFX1",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oWall2",
+  "eventList":[],
   "managed":true,
-  "name":"oVFX1",
+  "name":"oWall2",
   "overriddenProperties":[],
   "parent":{
-    "name":"VFX",
-    "path":"folders/Objects/VFX.yy",
+    "name":"Level Objects",
+    "path":"folders/Objects/Level Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sWall2",
+    "path":"sprites/sWall2/sWall2.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
