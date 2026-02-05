@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_MainTheme",
+  "%Name":"mus_Tutorial",
   "audioGroupId":{
     "name":"audiogroup_Music",
     "path":"audiogroups/audiogroup_Music",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":60.0,
+  "duration":21.942858,
   "exportDir":"",
-  "name":"mus_MainTheme",
+  "name":"mus_Tutorial",
   "parent":{
     "name":"Music",
     "path":"folders/Music.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_MainTheme.ogg",
+  "soundFile":"mus_Tutorial.ogg",
   "volume":1.0,
 }

@@ -33,6 +33,16 @@ global.islaDraw = false;
 global.islaFashion = false;
 global.islaGun = false;
 
+global.clydeReflection = false;
+global.clydeWeapon = false;
+global.clydeBack = false;
+global.clydeTherapy = false;
+
+global.alloyHair = false;
+global.alloyHat = false;
+global.alloySpellbook = false;
+global.alloyPlan = false;
+
 function SetStateFlag(_state) {
 	variable_global_set(_state, true);
 }
