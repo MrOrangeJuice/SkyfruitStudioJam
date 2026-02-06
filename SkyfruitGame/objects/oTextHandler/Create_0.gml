@@ -1,3 +1,4 @@
+if live_call() return live_result;
 text_struct = NONE; // The text struct loaded into the handler
 page_array = NONE; // Array of pages loaded into the handler
 active_textbox = noone;
@@ -26,7 +27,8 @@ StateAwaiting = function() {
 StateHandleNextPage = function() {
 
 	// Wait for the correct room and transition to end
-	if (room != rScene or instance_exists(oTransition)) { return; }
+	if (room != rScene) { return; }
+	with (oTransition) { if (mode != TRANS_MODE.OFF) return; }
 
 	// Last page
 	if (page >= array_length(page_array)) {

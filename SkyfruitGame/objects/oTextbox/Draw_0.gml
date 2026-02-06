@@ -8,7 +8,7 @@ if (center_text) {
 }
 
 // Draw the names
-if (name != NONE and !instance_exists(oChoiceMenu)) {
+if (name != NONE) {
 	name_offset = 64;
 	name_w = string_width(name) + 12;
 	name_h = 23;

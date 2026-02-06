@@ -1,9 +1,11 @@
 function NextScene() {
 	
 	// Always advance beat and save game
+	global.health = global.maxHealth;
 	if (room != rTitle) global.storyBeat++;
 	SaveGame();
 	ClearTextHandler();
+	StopMusic();
 
 
 	switch (global.storyBeat) {
@@ -18,7 +20,6 @@ function NextScene() {
 		case CHAPTER.ONE_INTRO:
 			SlideTransition(TRANS_MODE.GOTO, rScene);
 			LoadText("scene_intro", "intro_1");
-			PlayMusic(mus_MainTheme);
 			break;
 			
 		// Intro complete
@@ -31,7 +32,6 @@ function NextScene() {
 		case CHAPTER.TWO_CONVO:
 			SlideTransition(TRANS_MODE.GOTO, rScene);
 			LoadText("scene_isla", "isla_1");
-			PlayMusic(mus_Dating);
 			break;
 			
 		// Date with Isla complete
@@ -44,12 +44,11 @@ function NextScene() {
 		case CHAPTER.THREE_CONVO:
 			SlideTransition(TRANS_MODE.GOTO, rScene);
 			LoadText("scene_clyde", "clyde_1");
-			PlayMusic(mus_Dating);
 			break;
 
 		// Date with Clyde complete
 		case CHAPTER.THREE_BATTLE:
-			//SlideTransition(TRANS_MODE.GOTO, rLevel3);
+			SlideTransition(TRANS_MODE.GOTO, rLevel3);
 			PlayMusic(mus_JohnnyFights);
 			break;
 
@@ -58,19 +57,18 @@ function NextScene() {
 			room_goto(rScene);
 			ClearTextHandler();
 			LoadText("scene_alloy", "alloy_1");
-			PlayMusic(mus_Dating);
 			break;
 
 		// Date with Alloy complete
 		case CHAPTER.BOSS_BATTLE:
-			//SlideTransition(TRANS_MODE.GOTO, rLevel4);
+			SlideTransition(TRANS_MODE.GOTO, rLevel4);
 			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// Boss battle complete
 		case CHAPTER.FINAL_CONVO:
 			SlideTransition(TRANS_MODE.GOTO, rScene);
-			PlayMusic(mus_MainTheme);
+			LoadText("scene_end", "end_1");
 			break;
 	}
 }

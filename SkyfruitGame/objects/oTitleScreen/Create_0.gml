@@ -66,6 +66,7 @@ StateMain = function() {
 		
 		// Open pause menu
 		if (sel_pos == 3) {
+			audio_play_sound(snd_PauseIn, 0, false);
 			global.paused = true;
 		}
 	}
