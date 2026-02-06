@@ -289,10 +289,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rLevel3","path":"rooms/rLevel3/rLevel3.yy",},},
     {"roomId":{"name":"rTutorial","path":"rooms/rTutorial/rTutorial.yy",},},
     {"roomId":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"roomId":{"name":"rLevel2","path":"rooms/rLevel2/rLevel2.yy",},},
-    {"roomId":{"name":"rLevel3","path":"rooms/rLevel3/rLevel3.yy",},},
     {"roomId":{"name":"rLevel4","path":"rooms/rLevel4/rLevel4.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rScene","path":"rooms/rScene/rScene.yy",},},

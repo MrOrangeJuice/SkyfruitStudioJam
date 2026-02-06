@@ -2,7 +2,7 @@
 
 event_inherited();
 
-hp = 1;
+hp = 2;
 xSpeed = 1;
 vsp = -3;
 grv = 0.1;
