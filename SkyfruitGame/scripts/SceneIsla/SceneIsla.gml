@@ -22,7 +22,7 @@ scene_isla = {
 	missed_me: [
 		Page(spk_johnny, "Missed me, sweetheart?"),
 		Page(spk_isla, "..."),
-		Page(spk_isla, "|V|Yeeeeeesh.../V/ Johnny Slick never do hold back, do he?"),
+		Page(spk_isla, "|V|Yeeeeeesh.../V/ Johnny Slick always be flirtin', don't he?"),
 		GotoPage("isla_2"),
 	],
 	
@@ -32,7 +32,7 @@ scene_isla = {
 		Page(spk_isla, "The same sorry-not-sorry eyes..."),
 		Page(spk_isla, "Y'all remember how you dun left me last time your rear end was in town?"),
 		Page(spk_johnny, "I, uh....."),
-		Page(spk_isla, "Don' borther rememberin' cos I'mma let you have it."),
+		Page(spk_isla, "Don' borther. Here's what happened:"),
 		ChoicePage(
 			Choice("Fell out a window", "window"),
 			Choice("Lost a bet", "lost_bet"),
@@ -40,8 +40,11 @@ scene_isla = {
 	],
 	window: [
 		Page(spk_isla, "You and I had just finished what I would |V|almost/V/ have called a romantic evenin'."),
+		CodePage(PorMove, [oPorJohnny, 80]),
 		Page(spk_johnny, "Isla, I..."),
+		CodePage(PorMove, [oPorJohnny, 0]),
 		Page(spk_isla, "Oh, you were showerin' me with yer praises, says I was the prettiest girl this side of the Big Donut."),
+		CodePage(PorFace, [oPorJohnny, RIGHT]),
 		Page(spk_isla, "Took you up to my room, we spent almost all night..."),
 		Page(spk_isla, "...playin' cards."),
 		Page(spk_johnny, "The romance-iest activity in the West."),
@@ -49,8 +52,10 @@ scene_isla = {
 		Page(spk_isla, "'til right about 3am I hear this terrifyin' crash."),
 		Page(spk_isla, "Ol' Johnny ain't so Slick now. Crawlin' out my window, slippin' on those mighty boots o'yers."),
 		Page(spk_isla, "Three flights o'stairs down into the dumpster."),
+		CodePage(PorShake, [oPorIsla]),
 		Page(spk_isla, "|V||S|CRASH!!!/V//S/"),
 		Page(spk_johnny, "...heh... Good times, right Isla?"),
+		Page(spk_isla, "You ran out on me."),
 		GotoPage("isla_3"),
 	],
 	lost_bet: [
@@ -62,11 +67,15 @@ scene_isla = {
 		Page(spk_isla, "It was worth a shot, at least."),
 		Page(spk_isla, "Heck, I even went so far as to imagine the two of us, alone somewhere safe....."),
 		Page(spk_isla, "Chewin' bubblegum."),
+		CodePage(PorMove, [oPorJohnny, 80]),
 		Page(spk_johnny, "Isla, we can still..."),
 		Page(spk_isla, "That'd've been so nice."),
+		CodePage(PorMove, [oPorJohnny, 0]),
 		Page(spk_isla, "But then you sat down at that gosh-darned card game and a few hours later... well..."),
+		CodePage(PorFace, [oPorJohnny, RIGHT]),
 		Page(spk_isla, "You tried to walk back over to me with almost all yer clothes missin'."),
 		Page(spk_johnny, "Well, the rules of the game..."),
+		CodePage(PorShake, [oPorIsla]),
 		Page(spk_isla, "|S|Who loses their clothes playin' poker, Johnny?/S/"),
 		Page(spk_isla, "I walked right out."),
 		GotoPage("isla_3"),
@@ -97,19 +106,22 @@ scene_isla = {
 	
 	
 	isla_4: [
-	
 		Page(spk_isla, "Always tryin'ta impress, Johnny."),
 		Page(spk_johnny, "Heh. Is it workin'?"),
 		Page(spk_isla, "Not a chance."),
+		CodePage(PorMove, [oPorJohnny, 100]),
 		Page(spk_johnny, "I wouldn't be here 'less it was important, Isla."),
 		Page(spk_johnny, "And it's important."),
+		CodePage(PorFace, [oPorIsla, RIGHT]),
+		Page(spk_isla, "...."),
 		Page(spk_isla, "You're nothin' to me, Johnny."),
 		ChoicePage(
 			Choice("You're right", "youre_right"),
-			Choice("I reckon' I'm somethin' to you", "im_somethin"),
+			Choice("I reckon' I'm somethin' to you", "im_somethin", 5),
 		),
 	],
 	youre_right: [
+		CodePage(PorMove, [oPorJohnny, 0]),
 		Page(spk_johnny, "Tsk. You're right. But..."),
 		GotoPage("isla_5"),
 	],
@@ -122,12 +134,14 @@ scene_isla = {
 		),
 	],
 	you_aint: [
+		CodePage(PorFace, [oPorIsla, LEFT]),
 		Page(spk_isla, "You ain't."),
 		GotoPage("isla_5"),
 	],
 	pour_drink: [
 		Page(spk_johnny, "Somethin' enough to pour me a drink?"),
 		Page(spk_isla, "..."),
+		CodePage(PorFace, [oPorIsla, LEFT]),
 		Page(spk_isla, "Urgh. Johnny. The cowboy."),
 		Page(spk_isla, "Always rootin'. Always tootin'. Always shootin'... yer shot."),
 		Page(spk_isla, "I'll pour you a drink."),
@@ -139,7 +153,10 @@ scene_isla = {
 	],
 
 	isla_5: [
+		CodePage(PorMove, [oPorJohnny, 0]),
 		Page(spk_johnny, "Jus' lemme tell you my woes for a time and I'll be on my way."),
+		CodePage(PorFace, [oPorJohnny, RIGHT]),
+		CodePage(PorFace, [oPorIsla, LEFT]),
 		Page(spk_isla, "Honestly, Johnny, sometimes I can't even figure out what you mean to say."),
 		Page(spk_isla, "So jus' say yer nonsense and be on with it."),
 		Page(spk_johnny, "I'm in a pickle, Isla."),
@@ -149,7 +166,7 @@ scene_isla = {
 		Page(spk_isla, "..."),
 		Page(spk_isla, "Oh no you dun meant yer horse."),
 		Page(spk_johnny, "It's... complicated."),
-		Page(spk_isla, "Villain stole yer horse, didn't they?"), // TODO: replace with the villain
+		Page(spk_isla, "Villin stole yer horse, didn't they?"),
 		Page(spk_johnny, "Yeah."),
 		ChoicePage(
 			Choice("I'm just a deadbeat.", "deadbeat"),
@@ -173,7 +190,7 @@ scene_isla = {
 		Page(spk_isla, "..."),
 		Page(spk_isla, "Alright. What can I do?"),
 		ChoicePage(
-			Choice("Seein' yer smile is enough.", "isla_final"),
+			Choice("Seein' yer smile is enough.", "isla_final_1"),
 			Choice("Kiss my gun for good luck.", "kiss_gun", 5, sDamageUp, "islaKiss"),
 			Choice("Help me practise my draw.", "practise_draw", 5, sFireSpeedUp, "islaDraw"),
 			Choice("Fashion advice?", "fashion", 5, sMoveSpeedUp, "islaFashion"),
@@ -265,6 +282,9 @@ scene_isla = {
 	isla_final_2: [
 		CodePage(PorExit, [oPorJohnny]),
 		CodePage(PorExit, [oPorIsla]),
+		Page(spk_none, "....."),
+		CodePage(NextScene),
+
 	],
 
 

@@ -36,6 +36,6 @@ switch (upgrade) {
 alpha = 1;
 depth = UPGRADE_GET_DEPTH;
 start_y = 100;
-x = 180;
+x = 155;
 y = start_y;
 audio_play_sound(snd_Upgrade, 0, false);

@@ -1,5 +1,5 @@
 if live_call() return live_result;
-
+depth = CHOICE_MENU_DEPTH;
 t = 0;
 grace_frames = 30;
 alpha = 0;

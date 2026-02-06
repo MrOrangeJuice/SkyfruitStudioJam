@@ -1,5 +1,6 @@
 if live_call() return live_result;
 
+
 key_pause = keyboard_check_pressed(vk_escape);
 key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
@@ -68,6 +69,8 @@ if(displayContinue && key_select && canShiftRooms)
 {
 	canShiftRooms = false;
 	audio_play_sound(snd_GunFire,5,false);
+	NextScene();
+	/*
 	switch(room)
 	{
 		case rTutorial:
@@ -86,6 +89,7 @@ if(displayContinue && key_select && canShiftRooms)
 			SlideTransition(TRANS_MODE.GOTO,rHorseEnding);
 			break;
 	}
+	*/
 }
 
 resultsY = lerp(resultsY, resultsYTarget, 0.2);

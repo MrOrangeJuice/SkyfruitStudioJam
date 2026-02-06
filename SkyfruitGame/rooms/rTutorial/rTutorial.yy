@@ -8,16 +8,13 @@
   "instanceCreationOrder":[
     {"name":"inst_2ECD1AEE1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_62A1C1DC1","path":"rooms/rTutorial/rTutorial.yy",},
-    {"name":"inst_396557F1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_39F8EF4D1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_BA509A9_1","path":"rooms/rTutorial/rTutorial.yy",},
-    {"name":"inst_249099F9_1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_3FB3F54A1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_5B2A3AD7_1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_682C2177_1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_6124F46_1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_653B7D97_1","path":"rooms/rTutorial/rTutorial.yy",},
-    {"name":"inst_3F18521C1","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_20BF1351","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_390D76ED","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_7C85E91F","path":"rooms/rTutorial/rTutorial.yy",},
@@ -29,6 +26,7 @@
     {"name":"inst_413CF48F","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_2701AC4A","path":"rooms/rTutorial/rTutorial.yy",},
     {"name":"inst_607AB7D8","path":"rooms/rTutorial/rTutorial.yy",},
+    {"name":"inst_249099F9_1","path":"rooms/rTutorial/rTutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -73,9 +71,7 @@
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_62A1C1DC1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_62A1C1DC1","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":656.0,},
-        {"$GMRInstance":"v4","%Name":"inst_396557F1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_396557F1","objectId":{"name":"oBattleSystem","path":"objects/oBattleSystem/oBattleSystem.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":544.0,},
-        {"$GMRInstance":"v4","%Name":"inst_249099F9_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_249099F9_1","objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":544.0,},
-        {"$GMRInstance":"v4","%Name":"inst_3F18521C1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3F18521C1","objectId":{"name":"obj_gmlive","path":"objects/obj_gmlive/obj_gmlive.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":112.0,"y":544.0,},
+        {"$GMRInstance":"v4","%Name":"inst_249099F9_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_249099F9_1","objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":544.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"BackVFX","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"BackVFX","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Walls","depth":800,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
