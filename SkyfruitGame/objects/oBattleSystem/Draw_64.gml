@@ -4,7 +4,7 @@ healthTextScale = max(healthTextScale * .95, 1);
 healthToDraw = global.health;
 xMod = 0;
 
-if (room != rTitle and room != rScene and room != rHorseEnding)
+if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding)
 {
 	
 	// Draw enemy UI
@@ -37,11 +37,13 @@ if (room != rTitle and room != rScene and room != rHorseEnding)
 	draw_set_halign(fa_center);
 	draw_set_color(#16171A);
 	
+	
+	
 }
 
 
 
-if (room != rTitle) {
+if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding) {
 	
 	for(i = 0; i < global.maxHealth; i++)
 	{
@@ -70,6 +72,120 @@ if (room != rTitle) {
 			}
 		}
 		healthToDraw--;
+	}
+	
+	upgradeX = 88;
+	upgradeY = 2;
+	textOffsetX = 9;
+	textOffsetY = 12;
+	
+	// Draw upgrade icons
+	if(damageUpgrade > 1)
+	{
+		draw_sprite(sDamageUp,0,upgradeX,upgradeY);
+			draw_text_border(
+		upgradeX + textOffsetX,
+		upgradeY + textOffsetY,
+		damageUpgrade
+		)
+	}
+	else if(damageUpgrade > 0)
+	{
+		draw_sprite(sDamageUp,0,upgradeX,upgradeY);
+	}
+	else
+	{
+		draw_sprite_ext(sDamageUp,0,upgradeX,upgradeY,1,1,0,c_white,0.5);
+	}
+	
+	if(dashUpgrade > 1)
+	{
+		draw_sprite(sExtraDash,0,upgradeX+18,upgradeY);
+			draw_text_border(
+		upgradeX + textOffsetX+18,
+		upgradeY + textOffsetY,
+		dashUpgrade
+		)
+	}
+	else if(dashUpgrade > 0)
+	{
+		draw_sprite(sExtraDash,0,upgradeX+18,upgradeY);
+	}
+	else
+	{
+		draw_sprite_ext(sExtraDash,0,upgradeX+18,upgradeY,1,1,0,c_white,0.5);
+	}
+	
+	if(fireRateUpgrade > 1)
+	{
+		draw_sprite(sFireSpeedUp,0,upgradeX+36,upgradeY);
+			draw_text_border(
+		upgradeX + textOffsetX+36,
+		upgradeY + textOffsetY,
+		fireRateUpgrade
+		)
+	}
+	else if(fireRateUpgrade > 0)
+	{
+		draw_sprite(sFireSpeedUp,0,upgradeX+36,upgradeY);
+	}
+	else
+	{
+		draw_sprite_ext(sFireSpeedUp,0,upgradeX+36,upgradeY,1,1,0,c_white,0.5);
+	}
+	
+	if(moveSpeedUpgrade > 1)
+	{
+		draw_sprite(sMoveSpeedUp,0,upgradeX+54,upgradeY);
+			draw_text_border(
+		upgradeX + textOffsetX+54,
+		upgradeY + textOffsetY,
+		moveSpeedUpgrade
+		)
+	}
+	else if(moveSpeedUpgrade > 0)
+	{
+		draw_sprite(sMoveSpeedUp,0,upgradeX+54,upgradeY);
+	}
+	else
+	{
+		draw_sprite_ext(sMoveSpeedUp,0,upgradeX+54,upgradeY,1,1,0,c_white,0.5);
+	}
+	
+	if(healthUpgrade > 1)
+	{
+		draw_sprite(sHealthUp,0,upgradeX+72,upgradeY);
+			draw_text_border(
+		upgradeX + textOffsetX+72,
+		upgradeY + textOffsetY,
+		healthUpgrade
+		)
+	}
+	else if(healthUpgrade > 0)
+	{
+		draw_sprite(sHealthUp,0,upgradeX+72,upgradeY);
+	}
+	else
+	{
+		draw_sprite_ext(sHealthUp,0,upgradeX+72,upgradeY,1,1,0,c_white,0.5);
+	}
+	
+	if(bigBulletUpgrade > 0)
+	{
+		draw_sprite(sBigBullets,0,upgradeX+99,upgradeY);
+	}
+	else
+	{
+		draw_sprite_ext(sBigBullets,0,upgradeX+99,upgradeY,1,1,0,c_white,0.5);
+	}
+	
+	if(invincDashUpgrade > 0)
+	{
+		draw_sprite(sInvulernableDash,0,upgradeX+117,upgradeY);
+	}
+	else
+	{
+		draw_sprite_ext(sInvulernableDash,0,upgradeX+117,upgradeY,1,1,0,c_white,0.5);
 	}
 	
 	// Draw gifts

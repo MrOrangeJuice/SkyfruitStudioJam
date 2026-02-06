@@ -33,3 +33,29 @@ switch(room)
 		global.enemiesLeft = 1;
 		break;
 }
+
+/*
+array_push(global.upgradesList, UPGRADES.BIG_BULLETS);
+array_push(global.upgradesList, UPGRADES.INVULNERABLE_DASH);
+
+array_push(global.upgradesList, UPGRADES.DAMAGE_UP);
+array_push(global.upgradesList, UPGRADES.EXTRA_DASH);
+array_push(global.upgradesList, UPGRADES.FIRE_SPEED_UP);
+array_push(global.upgradesList, UPGRADES.MOVE_SPEED_UP);
+array_push(global.upgradesList, UPGRADES.HEALTH_UP);
+
+array_push(global.upgradesList, UPGRADES.DAMAGE_UP);
+array_push(global.upgradesList, UPGRADES.EXTRA_DASH);
+array_push(global.upgradesList, UPGRADES.FIRE_SPEED_UP);
+array_push(global.upgradesList, UPGRADES.MOVE_SPEED_UP);
+array_push(global.upgradesList, UPGRADES.HEALTH_UP);
+*/
+
+bigBulletUpgrade = CheckUpgrades(UPGRADES.BIG_BULLETS);
+invincDashUpgrade = CheckUpgrades(UPGRADES.INVULNERABLE_DASH);
+
+damageUpgrade = CheckUpgrades(UPGRADES.DAMAGE_UP);
+dashUpgrade = CheckUpgrades(UPGRADES.EXTRA_DASH);
+fireRateUpgrade = CheckUpgrades(UPGRADES.FIRE_SPEED_UP);
+moveSpeedUpgrade = CheckUpgrades(UPGRADES.MOVE_SPEED_UP);
+healthUpgrade = CheckUpgrades(UPGRADES.HEALTH_UP);

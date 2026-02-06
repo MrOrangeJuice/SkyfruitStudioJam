@@ -28,6 +28,27 @@ displayContinue = false;
 
 canShiftRooms = true;
 
+/*
+GetUpgrade(UPGRADES.BIG_BULLETS);
+GetUpgrade(UPGRADES.INVULNERABLE_DASH);
+
+GetUpgrade(UPGRADES.DAMAGE_UP);
+GetUpgrade(UPGRADES.HEALTH_UP);
+GetUpgrade(UPGRADES.EXTRA_DASH);
+GetUpgrade(UPGRADES.MOVE_SPEED_UP);
+GetUpgrade(UPGRADES.HEALTH_UP);
+*/
+
+bigBulletUpgrade = CheckUpgrades(UPGRADES.BIG_BULLETS);
+invincDashUpgrade = CheckUpgrades(UPGRADES.INVULNERABLE_DASH);
+
+damageUpgrade = CheckUpgrades(UPGRADES.DAMAGE_UP);
+dashUpgrade = CheckUpgrades(UPGRADES.EXTRA_DASH);
+fireRateUpgrade = CheckUpgrades(UPGRADES.FIRE_SPEED_UP);
+moveSpeedUpgrade = CheckUpgrades(UPGRADES.MOVE_SPEED_UP);
+healthUpgrade = CheckUpgrades(UPGRADES.HEALTH_UP);
+
+
 global.enemiesLeft = 20;
 
 switch(room)
