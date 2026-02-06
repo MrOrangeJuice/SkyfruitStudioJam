@@ -37,8 +37,8 @@ if (room != rTitle and room != rScene and room != rHorseEnding and room != rNorm
 	
 	upgradeX = 88;
 	upgradeY = 2;
-	textOffsetX = 9;
-	textOffsetY = 12;
+	textOffsetX = 14;
+	textOffsetY = 5;
 	
 	// Draw upgrade icons
 	if(damageUpgrade > 1)

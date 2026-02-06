@@ -1,5 +1,8 @@
 if live_call() return live_result;
 
+if (!global.debug) { exit; }
+
+
 global.giftCount = 900;
 room_goto(rScene);
 global.paused = false;

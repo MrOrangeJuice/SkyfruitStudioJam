@@ -81,12 +81,12 @@ credits_positions = [
 ]
 credits_names = [
 	"Arkington \"Mallory\" Owen",
-	"Alex \"Super Citrus\" Lastname",
+	"Alex \"Super Citrus\" Parrotto",
 	"Doty!",
 ]
 credits_desc = [
 	"A programmer/artist/musician/storyteller who has been making the same pixel-art wizard RPG for two years.",
-	"Alex description",
+	"The Lead Designer of Sour Lemon Studios, a neat little indie game company working on Tower of Dreams and other cool platformers!",
 	"Doty description",
 ]
 credits_plug = [

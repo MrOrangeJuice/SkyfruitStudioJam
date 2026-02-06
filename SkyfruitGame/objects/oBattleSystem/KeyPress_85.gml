@@ -1,4 +1,6 @@
 if live_call() return live_result;
 
-	with (oTransition) { if (mode != TRANS_MODE.OFF) print("NopE"); }
+if (!global.debug) { exit; }
+
+global.upgradesList = [UPGRADES.MOVE_SPEED_UP, UPGRADES.MOVE_SPEED_UP, UPGRADES.MOVE_SPEED_UP, UPGRADES.BIG_BULLETS];
 

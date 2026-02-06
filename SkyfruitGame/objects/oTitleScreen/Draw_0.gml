@@ -56,7 +56,7 @@ if (state == StateMain) {
 			credits_names[i],
 		)
 		draw_text_border_ext(
-			32, _offset + 30, credits_desc[i], 12,224,
+			32, _offset + 30, credits_desc[i], 12, 280,
 			1, #00847c,
 		)
 		draw_sprite_stretched(
