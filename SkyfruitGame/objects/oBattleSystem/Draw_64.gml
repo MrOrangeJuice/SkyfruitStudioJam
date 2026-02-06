@@ -4,45 +4,6 @@ healthTextScale = max(healthTextScale * .95, 1);
 healthToDraw = global.health;
 xMod = 0;
 
-if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding)
-{
-	
-	// Draw enemy UI
-	enemyUIX = SCREEN_W-30;
-	enemyUIY = 8;
-	
-	draw_set_color(#7F0622);
-	draw_sprite(sEnemyUI,0,enemyUIX,enemyUIY);
-	draw_text(enemyUIX+20,enemyUIY-9,"x" + string(global.enemiesLeft));
-	
-	// Draw continue
-	if(displayContinue)
-	{
-		draw_sprite(sContinue,global.controller,140,continueY);	
-	}
-	
-	// Draw results
-	draw_sprite(sWanted,resultsFrame,128,resultsY);
-	draw_set_halign(fa_right);
-	if(displayReward) 
-	{
-		draw_text(183,resultsY+59,reward);
-		draw_sprite(sGiftSmall,0,167,resultsY+65);
-	}
-	if(displayBonus) 
-	{
-		draw_text(183,resultsY+67,curBonus);
-		draw_sprite(sGiftSmall,0,167,resultsY+73);
-	}
-	draw_set_halign(fa_center);
-	draw_set_color(#16171A);
-	
-	
-	
-}
-
-
-
 if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding) {
 	
 	for(i = 0; i < global.maxHealth; i++)
@@ -207,6 +168,40 @@ if (room != rTitle and room != rScene and room != rHorseEnding and room != rNorm
 		giftY + textOffsetY,
 		$"x{global.giftCount}"
 	)
+}
+
+if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding)
+{
+	
+	// Draw enemy UI
+	enemyUIX = SCREEN_W-30;
+	enemyUIY = 8;
+	
+	draw_set_color(#7F0622);
+	draw_sprite(sEnemyUI,0,enemyUIX,enemyUIY);
+	draw_text(enemyUIX+20,enemyUIY-9,"x" + string(global.enemiesLeft));
+	
+	// Draw continue
+	if(displayContinue)
+	{
+		draw_sprite(sContinue,global.controller,140,continueY);	
+	}
+	
+	// Draw results
+	draw_sprite(sWanted,resultsFrame,128,resultsY);
+	draw_set_halign(fa_right);
+	if(displayReward) 
+	{
+		draw_text(183,resultsY+59,reward);
+		draw_sprite(sGiftSmall,0,167,resultsY+65);
+	}
+	if(displayBonus) 
+	{
+		draw_text(183,resultsY+67,curBonus);
+		draw_sprite(sGiftSmall,0,167,resultsY+73);
+	}
+	draw_set_halign(fa_center);
+	draw_set_color(#16171A);
 }
 
 // Pause menu

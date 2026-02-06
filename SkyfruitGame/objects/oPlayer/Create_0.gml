@@ -3,13 +3,14 @@
 hsp = 0;
 vsp = 0;
 grv = 0.2;
-walksp = 2;
+walksp = 2 + (oBattleSystem.moveSpeedUpgrade/2);
+oldwalksp = walksp;
 currentwalksp = 0;
 canJump = true;
 jumpBuffer = 0;
 airborne = false;
 shootTimer = 0;
-shootCooldown = 10;
+shootCooldown = 10 - oBattleSystem.fireRateUpgrade;
 accel = 0.25;
 spawnDust = 0;
 dashing = false;

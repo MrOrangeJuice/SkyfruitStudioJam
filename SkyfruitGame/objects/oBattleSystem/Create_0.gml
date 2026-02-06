@@ -28,17 +28,6 @@ displayContinue = false;
 
 canShiftRooms = true;
 
-/*
-GetUpgrade(UPGRADES.BIG_BULLETS);
-GetUpgrade(UPGRADES.INVULNERABLE_DASH);
-
-GetUpgrade(UPGRADES.DAMAGE_UP);
-GetUpgrade(UPGRADES.HEALTH_UP);
-GetUpgrade(UPGRADES.EXTRA_DASH);
-GetUpgrade(UPGRADES.MOVE_SPEED_UP);
-GetUpgrade(UPGRADES.HEALTH_UP);
-*/
-
 bigBulletUpgrade = CheckUpgrades(UPGRADES.BIG_BULLETS);
 invincDashUpgrade = CheckUpgrades(UPGRADES.INVULNERABLE_DASH);
 

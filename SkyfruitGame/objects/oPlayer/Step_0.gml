@@ -153,7 +153,7 @@ if(!global.paused && !global.hitPause)
 	// Dash
 	if(key_dash && !dashing)
 	{
-		speedValue = 4;
+		speedValue = walksp + 2;
 		dashing = true;
 		initialRunDir = image_xscale;
 		dashOver = false;
@@ -209,13 +209,13 @@ if(!global.paused && !global.hitPause)
 			if(airborne)
 			{
 				walksp -= 0.035;
-				if(walksp < 2) walksp = 2;
+				if(walksp < oldwalksp) walksp = oldwalksp;
 			}
 		}
 	}
 	else
 	{
-		walksp = 2;
+		walksp = oldwalksp;
 	}
 			
 	// End Dash
