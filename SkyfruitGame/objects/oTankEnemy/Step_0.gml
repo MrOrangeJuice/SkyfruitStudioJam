@@ -191,6 +191,32 @@ if(!global.paused && !global.hitPause)
 			hsp = 0;
 		}
 		
+		// Other Enemy Collision
+		if (place_meeting(x+(16*hsp),y+1,oTankEnemy))
+		{
+			hsp = 0;
+		}
+		
+		// Get out of each other
+		if(place_meeting(x,y,oTankEnemy))
+		{
+			for(i = 0; i < 1000; i++)
+			{
+				// Right
+				if(!place_meeting(x+i,y,oTankEnemy))
+				{
+					x += i;
+					break;
+				}
+				// Left
+				if(!place_meeting(x-i,y,oTankEnemy))
+				{
+					x -= i;
+					break;
+				}
+			}
+		}
+		
 		x = x + hsp;
 		y = y + vsp;
 		
