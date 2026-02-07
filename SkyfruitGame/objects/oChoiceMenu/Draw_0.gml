@@ -5,6 +5,6 @@ if live_call() return live_result;
 draw_sprite(
 	sChoicerGun,
 	0,
-	sel_x,
+	sel_x - 2,
 	sel_y
 )

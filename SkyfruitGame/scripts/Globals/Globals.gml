@@ -44,6 +44,8 @@ global.alloyHair = false;
 global.alloyHat = false;
 global.alloySpellbook = false;
 global.alloyPlan = false;
+global.alloyMask = false;
+global.alloySmile = false;
 
 function SetStateFlag(_state) {
 	variable_global_set(_state, true);

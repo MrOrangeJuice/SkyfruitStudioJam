@@ -3,8 +3,8 @@
   "%Name":"sPorClyde",
   "bboxMode":0,
   "bbox_bottom":95,
-  "bbox_left":12,
-  "bbox_right":61,
+  "bbox_left":10,
+  "bbox_right":59,
   "bbox_top":28,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"fb580544-c863-462a-91a0-d97922e79684","name":"fb580544-c863-462a-91a0-d97922e79684","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4691f10c-ab95-43bb-8acd-c14a45f7814f","name":"4691f10c-ab95-43bb-8acd-c14a45f7814f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":96,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"4a7693dd-0ae6-40ce-8d7e-a265e39eddfb","blendMode":0,"displayName":"default","isLocked":false,"name":"4a7693dd-0ae6-40ce-8d7e-a265e39eddfb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f976c8ce-a73e-4c23-906d-c7255132f963","blendMode":0,"displayName":"default","isLocked":false,"name":"f976c8ce-a73e-4c23-906d-c7255132f963","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sPorClyde",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fb580544-c863-462a-91a0-d97922e79684","path":"sprites/sPorClyde/sPorClyde.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f6a6fd59-5c12-49c7-9e4f-b9f7bcb7cfac","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4691f10c-ab95-43bb-8acd-c14a45f7814f","path":"sprites/sPorClyde/sPorClyde.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6d0a39da-91a5-41f2-99a5-ecba6645e843","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

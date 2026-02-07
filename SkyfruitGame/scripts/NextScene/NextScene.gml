@@ -13,7 +13,6 @@ function NextScene() {
 		// Startup
 		case CHAPTER.NOTHING:
 			SlideTransition(TRANS_MODE.GOTO, rTutorial);
-			PlayMusic(mus_Tutorial);
 			break;
 		
 		// Tutorial complete
@@ -25,7 +24,6 @@ function NextScene() {
 		// Intro complete
 		case CHAPTER.ONE_BATTLE:
 			SlideTransition(TRANS_MODE.GOTO, rLevel1);
-			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// One battle complete
@@ -37,7 +35,6 @@ function NextScene() {
 		// Date with Isla complete
 		case CHAPTER.TWO_BATTLE:
 			SlideTransition(TRANS_MODE.GOTO, rLevel2);
-			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// Second battle complete
@@ -49,7 +46,6 @@ function NextScene() {
 		// Date with Clyde complete
 		case CHAPTER.THREE_BATTLE:
 			SlideTransition(TRANS_MODE.GOTO, rLevel3);
-			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// Third battle complete
@@ -62,7 +58,6 @@ function NextScene() {
 		// Date with Alloy complete
 		case CHAPTER.BOSS_BATTLE:
 			SlideTransition(TRANS_MODE.GOTO, rLevel4);
-			PlayMusic(mus_JohnnyFights);
 			break;
 
 		// Boss battle complete

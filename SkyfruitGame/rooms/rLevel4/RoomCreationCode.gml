@@ -1,0 +1,1 @@
+PlayMusic(mus_JohnnyFights);

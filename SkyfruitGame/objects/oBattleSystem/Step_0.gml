@@ -95,7 +95,7 @@ if(displayContinue && key_select && canShiftRooms)
 resultsY = lerp(resultsY, resultsYTarget, 0.2);
 continueY = lerp(continueY, continueYTarget, 0.2);
 
-if(global.enemiesLeft <= 0 && !resultsSpawned && room != rTitle && room != rHorseEnding && room != rScene)
+if(global.enemiesLeft <= 0 && !resultsSpawned && room != rTitle && room != rNormalEnding && room != rHorseEnding && room != rScene)
 {
 	if(global.resultsTime <= 0)
 	{

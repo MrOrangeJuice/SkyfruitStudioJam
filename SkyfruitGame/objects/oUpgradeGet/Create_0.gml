@@ -27,6 +27,11 @@ switch (upgrade) {
 		upgrade_text = "BULLET SIZE UP!!";
 		break;
 		
+	case UPGRADES.INVULNERABLE_DASH:
+		sprite_index = sBigBullets;
+		upgrade_text = "INVULNERABLE DASH!!";
+		break;
+		
 	case UPGRADES.EXTRA_DASH:
 		sprite_index = sExtraDash;
 		upgrade_text = "Extra dash!";

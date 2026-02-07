@@ -170,6 +170,29 @@ if (room != rTitle and room != rScene and room != rHorseEnding and room != rNorm
 	)
 }
 
+// Draw gifts for scene slightly different
+if (room == rScene) {
+	giftX = SCREEN_W - 24;
+	giftY = 5;
+	textOffsetX = 13;
+	textOffsetY = 1;
+	draw_sprite(
+		sGift,
+		0,
+		giftX,
+		giftY
+	)
+	draw_set_font(fntDaniel);
+	draw_set_valign(fa_top);
+	draw_set_halign(fa_center);
+	draw_text_border(
+		giftX + textOffsetX,
+		giftY + textOffsetY,
+		$"x{global.giftCount}"
+	)
+}
+
+
 if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding)
 {
 	

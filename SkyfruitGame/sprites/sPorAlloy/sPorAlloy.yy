@@ -3,8 +3,8 @@
   "%Name":"sPorAlloy",
   "bboxMode":0,
   "bbox_bottom":95,
-  "bbox_left":4,
-  "bbox_right":68,
+  "bbox_left":5,
+  "bbox_right":69,
   "bbox_top":21,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"4eccf046-e2af-434c-9239-b7a23555e2ec","name":"4eccf046-e2af-434c-9239-b7a23555e2ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"33ac8a62-d0fe-4635-837e-f6dde07461c7","name":"33ac8a62-d0fe-4635-837e-f6dde07461c7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":96,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"271a4a1b-f00a-4259-8d99-43ba55f0bbfa","blendMode":0,"displayName":"default","isLocked":false,"name":"271a4a1b-f00a-4259-8d99-43ba55f0bbfa","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3e3f7cb6-23cd-4867-aa2c-c5576f1e216f","blendMode":0,"displayName":"default","isLocked":false,"name":"3e3f7cb6-23cd-4867-aa2c-c5576f1e216f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sPorAlloy",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4eccf046-e2af-434c-9239-b7a23555e2ec","path":"sprites/sPorAlloy/sPorAlloy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2a68cabe-7701-4ebc-83d0-61e814ddd916","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"33ac8a62-d0fe-4635-837e-f6dde07461c7","path":"sprites/sPorAlloy/sPorAlloy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c4aa9c6b-7159-49c8-8c72-f3cbb66dc301","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

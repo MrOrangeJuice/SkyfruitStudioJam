@@ -85,7 +85,7 @@ if (icon != NONE) {
 	draw_sprite(
 		icon,
 		0,
-		x + textbox_w - 14,
+		x + textbox_w - 18,
 		y + textbox_h - 17
 	)
 }
@@ -95,12 +95,12 @@ if (gift_req != 0) {
 	draw_sprite(
 		sGift,
 		0,
-		x + textbox_w,
+		x + textbox_w - 8,
 		y + textbox_h - 8
 	)
 	draw_set_halign(fa_left);
 	draw_text_border(
-		x + textbox_w + 10,
+		x + textbox_w,
 		y + textbox_h - 6,
 		$"x{gift_req}"
 	)
