@@ -238,6 +238,7 @@
     {"id":{"name":"sLandVFX","path":"sprites/sLandVFX/sLandVFX.yy",},},
     {"id":{"name":"sLavaDebug","path":"sprites/sLavaDebug/sLavaDebug.yy",},},
     {"id":{"name":"sLavaDebug1","path":"sprites/sLavaDebug1/sLavaDebug1.yy",},},
+    {"id":{"name":"sLogo","path":"sprites/sLogo/sLogo.yy",},},
     {"id":{"name":"sMissileDown","path":"sprites/sMissileDown/sMissileDown.yy",},},
     {"id":{"name":"sMissileLeft","path":"sprites/sMissileLeft/sMissileLeft.yy",},},
     {"id":{"name":"sMissileLeftDown","path":"sprites/sMissileLeftDown/sMissileLeftDown.yy",},},
