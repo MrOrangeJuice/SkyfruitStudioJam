@@ -126,6 +126,7 @@ if(!global.paused && !global.hitPause)
 		}
 		airborne = false;	
 		jumpBuffer = 5;
+		curAirDash = airDashes;
 	}
 
 	// Jump
@@ -153,48 +154,52 @@ if(!global.paused && !global.hitPause)
 	// Dash
 	if(key_dash && !dashing)
 	{
-		speedValue = walksp + 2;
-		dashing = true;
-		initialRunDir = image_xscale;
-		dashOver = false;
-		walksp = speedValue;
-		hit = false;
-		if(key_right)
+		if((airborne && curAirDash > 0) || !airborne)
 		{
-			currentwalksp = speedValue;
-		}
-		else if(key_left)
-		{
-			currentwalksp = -speedValue;
-		}
-		else
-		{
-			currentwalksp = speedValue * sign(image_xscale);
-		}
-		dashVFX = instance_create_layer(x,y,"VFX",oDashVFX);
-		if (image_xscale == -1) dashVFX.image_xscale = -1;
-		if(key_right)
-		{
-			for(var i = 0; i < 5; i++)
+			speedValue = walksp + 2;
+			dashing = true;
+			initialRunDir = image_xscale;
+			dashOver = false;
+			walksp = speedValue;
+			hit = false;
+			if(key_right)
 			{
-				instance_create_layer(x-8,y+2,"VFX",oDashDustVFXLeft);
+				currentwalksp = speedValue;
 			}
-		}
-		else if(key_left)
-		{
-			for(var i = 0; i < 5; i++)
+			else if(key_left)
 			{
-				instance_create_layer(x+8,y+2,"VFX",oDashDustVFXRight);
+				currentwalksp = -speedValue;
 			}
+			else
+			{
+				currentwalksp = speedValue * sign(image_xscale);
+			}
+			dashVFX = instance_create_layer(x,y,"VFX",oDashVFX);
+			if (image_xscale == -1) dashVFX.image_xscale = -1;
+			if(key_right)
+			{
+				for(var i = 0; i < 5; i++)
+				{
+					instance_create_layer(x-8,y+2,"VFX",oDashDustVFXLeft);
+				}
+			}
+			else if(key_left)
+			{
+				for(var i = 0; i < 5; i++)
+				{
+					instance_create_layer(x+8,y+2,"VFX",oDashDustVFXRight);
+				}
+			}
+			alarm[0] = room_speed * 0.2;
+			dashParticles = instance_create_layer(x,y,"Walls",oPlayerDashParticle);
+			alarm[1] = room_speed * 0.05;
+			if (airborne)
+			{
+				curAirDash--;
+				airDash = true;
+			}
+			audio_play_sound(snd_Dash,5,false);
 		}
-		alarm[0] = room_speed * 0.2;
-		dashParticles = instance_create_layer(x,y,"Walls",oPlayerDashParticle);
-		alarm[1] = room_speed * 0.05;
-		if (airborne)
-		{
-			airDash = true;
-		}
-		audio_play_sound(snd_Dash,5,false);
 	}
 			
 	// Changes while dashing
@@ -240,7 +245,7 @@ if(!global.paused && !global.hitPause)
 		}
 	}
 	
-	if(!invulnerable)
+	if(!invulnerable && !(dashing && (oBattleSystem.invincDashUpgrade > 0)))
 	{
 		mask_index = sHurtbox;
 		var enemyHitRight = instance_place(x+(1*image_xscale),y,oEnemy);
@@ -290,7 +295,11 @@ if(!global.paused && !global.hitPause)
 	if (key_shoot && shootTimer <= 0)
 	{
 		shootTimer = shootCooldown;
-		bullet = instance_create_layer(x+(13*image_xscale),y+3,"Bullets",oBullet);
+		bullet = -1;
+		if(oBattleSystem.bigBulletUpgrade > 0)
+			bullet = instance_create_layer(x+(15*image_xscale),y+1,"Bullets",oBullet);
+		else
+			bullet = instance_create_layer(x+(13*image_xscale),y+3,"Bullets",oBullet);
 		if(key_right)
 		{
 			bullet.xdir = 1;
