@@ -28,6 +28,11 @@ if(other.hp <= 0)
 		instance_create_layer(other.x+36,other.y+48,"VFX",oParticleExplode);
 	}
 	instance_destroy(other);
+	
+	global.enemiesLeft--;
+	
+	instance_create_layer(0,0,"Instances",oHitstopEnd);
+	audio_play_sound(snd_Upgrade,5,false);
 }
 
 instance_destroy();

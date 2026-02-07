@@ -295,6 +295,7 @@
     {"id":{"name":"sWrenchEnemyRun","path":"sprites/sWrenchEnemyRun/sWrenchEnemyRun.yy",},},
     {"id":{"name":"sWrenchEnemyThrow","path":"sprites/sWrenchEnemyThrow/sWrenchEnemyThrow.yy",},},
     {"id":{"name":"villin1","path":"sprites/villin1/villin1.yy",},},
+    {"id":{"name":"villin10","path":"sprites/villin10/villin10.yy",},},
     {"id":{"name":"villin2","path":"sprites/villin2/villin2.yy",},},
     {"id":{"name":"villin3","path":"sprites/villin3/villin3.yy",},},
     {"id":{"name":"villin4","path":"sprites/villin4/villin4.yy",},},
