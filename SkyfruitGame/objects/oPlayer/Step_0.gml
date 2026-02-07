@@ -297,7 +297,7 @@ if(!global.paused && !global.hitPause)
 		shootTimer = shootCooldown;
 		bullet = -1;
 		if(oBattleSystem.bigBulletUpgrade > 0)
-			bullet = instance_create_layer(x+(15*image_xscale),y+1,"Bullets",oBullet);
+			bullet = instance_create_layer(x+(15*image_xscale),y+1,"Bullets",oBigBullet);
 		else
 			bullet = instance_create_layer(x+(13*image_xscale),y+3,"Bullets",oBullet);
 		if(key_right)
