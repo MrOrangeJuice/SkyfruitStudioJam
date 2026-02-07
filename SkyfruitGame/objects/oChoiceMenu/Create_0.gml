@@ -5,6 +5,7 @@ grace_frames = 30;
 alpha = 0;
 pause_timer = 0;
 
+alpha = 0;
 sprite_index = sTextbox;
 
 // Initialize variables
