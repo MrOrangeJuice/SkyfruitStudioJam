@@ -19,6 +19,11 @@ resultsFrame = 0;
 continueY = 72;
 continueYTarget = 72;
 
+// for the animation
+displayGift = 0;
+displayGiftTimer = 0;
+displayGiftFrames = 6;
+
 reward = 20;
 bonus = 20;
 curBonus = bonus;
@@ -28,20 +33,13 @@ displayContinue = false;
 
 canShiftRooms = true;
 
-bigBulletUpgrade = CheckUpgrades(UPGRADES.BIG_BULLETS);
-invincDashUpgrade = CheckUpgrades(UPGRADES.INVULNERABLE_DASH);
-
-damageUpgrade = CheckUpgrades(UPGRADES.DAMAGE_UP);
-dashUpgrade = CheckUpgrades(UPGRADES.EXTRA_DASH);
-fireRateUpgrade = CheckUpgrades(UPGRADES.FIRE_SPEED_UP);
-moveSpeedUpgrade = CheckUpgrades(UPGRADES.MOVE_SPEED_UP);
-healthUpgrade = CheckUpgrades(UPGRADES.HEALTH_UP);
 
 analogUpPrev = false;
 analogDownPrev = false;
 analogUpPrevD = false;
 analogDownPrevD = false;
 
+ApplyUpgrades();
 
 global.enemiesLeft = 20;
 

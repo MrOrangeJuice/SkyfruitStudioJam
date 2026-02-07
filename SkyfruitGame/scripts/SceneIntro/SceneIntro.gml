@@ -120,7 +120,7 @@ scene_intro = {
 		CodePage(PorFace, [oPorJohnny, LEFT]),
 		CodePage(PorChange, [oPorJohnny, sPorJohnnySad]),
 		Page(spk_johnny, "...no. I may be out of good options, but I'm not out of options."),
-		CodePage(PorMove, [oPorJohnny, 100]),
+		CodePage(PorMove, [oPorJohnny, 110]),
 		Page(spk_johnny, "I'm Johnny slick. Even an ex-romantic-pard'ner is still an ally if you're charmin' enough."),
 		CodePage(PorShake, [oPorJohnny]),
 		Page(spk_johnny, "And I sure as |S|heck/S/ can be charmin'."),

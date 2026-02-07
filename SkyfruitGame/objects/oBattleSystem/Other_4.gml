@@ -7,6 +7,9 @@ resultsFrame = 0;
 continueY = 72;
 continueYTarget = 72;
 
+displayGift = global.giftCount;
+
+
 if(room == rTutorial)
 {
 	reward = 2;
@@ -42,5 +45,3 @@ switch(room)
 		global.enemiesLeft = 1;
 		break;
 }
-
-ApplyUpgrades();

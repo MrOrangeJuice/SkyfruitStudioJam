@@ -1,4 +1,5 @@
 /// @description Init
+ApplyUpgrades();
 
 hsp = 0;
 vsp = 0;
@@ -21,3 +22,5 @@ dashOver = false;
 initialRunDir = 0;
 hit = false;
 invulnerable = 0;
+
+last_dir = RIGHT;

@@ -77,7 +77,7 @@ if (key_select and t > grace_frames) {
 		global.giftCount -= _gift_cost;
 		audio_play_sound(snd_GunFire, 0, false);
 		if (_gift_cost > 0) {
-			audio_play_sound(snd_SpendGift, 0, false);
+			//audio_play_sound(snd_SpendGift, 0, false);
 		}
 		
 		// Set state flag for any choice with an associated flag (to prevent duplicates)

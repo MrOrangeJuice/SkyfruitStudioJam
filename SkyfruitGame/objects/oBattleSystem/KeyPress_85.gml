@@ -2,5 +2,4 @@ if live_call() return live_result;
 
 if (!global.debug) { exit; }
 
-global.storyBeat = CHAPTER.ONE_BATTLE;
-NextScene();
+GetUpgrade(UPGRADES.FIRE_SPEED_UP);

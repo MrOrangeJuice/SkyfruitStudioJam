@@ -100,7 +100,7 @@ if(global.enemiesLeft <= 0 && !resultsSpawned && room != rTitle && room != rNorm
 	if(global.resultsTime <= 0)
 	{
 		resultsSpawned = true;
-		resultsYTarget = 12;
+		resultsYTarget = 36;
 		alarm[0] = room_speed * 1;
 		audio_play_sound(snd_GunClick,5,false);
 	
@@ -227,4 +227,15 @@ if(gamepad_axis_value(4,gp_axislv) > 0.4)
 else
 {
 	analogDownPrevD = false;	
+}
+
+// Gift animation
+displayGiftFrames = (displayGift - global.giftCount > 10 ? 2 : 6);
+if (displayGiftTimer > 0) {
+	displayGiftTimer--;
+}
+else if (global.giftCount < displayGift and room == rScene) {
+	displayGift--;
+	displayGiftTimer = displayGiftFrames;
+	audio_play_sound(snd_GiftReduce, 0, false);
 }

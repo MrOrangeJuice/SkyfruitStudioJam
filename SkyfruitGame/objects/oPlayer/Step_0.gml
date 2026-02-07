@@ -387,18 +387,27 @@ else
 	}
 }
 
+
 if (hsp != 0 && !hit) 
 {
 	if(key_right)
 	{
-		image_xscale = 1;
+		last_dir = RIGHT;
+		//image_xscale = 1;
 	}
 	else if(key_left)
 	{
-		image_xscale = -1;
+		last_dir = LEFT;
 	}
 	else
 	{
 		image_xscale = sign(hsp);
 	}
+}
+
+if (last_dir == RIGHT) {
+	image_xscale = 1;
+} else {
+	image_xscale = -1;
+
 }

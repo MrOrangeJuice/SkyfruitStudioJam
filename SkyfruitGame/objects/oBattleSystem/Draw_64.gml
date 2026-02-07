@@ -166,19 +166,26 @@ if (room == rScene) {
 	giftY = 5;
 	textOffsetX = 13;
 	textOffsetY = 1;
+	var _col = (displayGiftTimer > displayGiftFrames/4 ? c_red : c_white);
+	var _spendOffsetX = random_range(-2, 2)*(displayGiftTimer > displayGiftFrames/4);
+	var _spendOffsetY = random_range(-2, 2)*(displayGiftTimer > displayGiftFrames/4);
 	draw_sprite(
 		sGift,
 		0,
-		giftX,
-		giftY
+		giftX + _spendOffsetX,
+		giftY + _spendOffsetY
 	)
 	draw_set_font(fntDaniel);
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_center);
-	draw_text_border(
-		giftX + textOffsetX,
-		giftY + textOffsetY,
-		$"x{global.giftCount}"
+	draw_text_border_ext(
+		giftX + textOffsetX + _spendOffsetX,
+		giftY + textOffsetY + _spendOffsetY,
+		$"x{displayGift}",
+		999,
+		999,
+		1,
+		_col
 	)
 }
 

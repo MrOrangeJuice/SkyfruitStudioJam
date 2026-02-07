@@ -238,6 +238,7 @@ scene_isla = {
 		Page(spk_isla, "..."),
 		CodePage(PorChange, [oPorIsla, sPorIslaConsidering]),
 		Page(spk_isla, "Alright. What can I do?"),
+		Page(spk_isla, "..."),
 		ChoicePage(
 			Choice("Seein' yer smile is enough.", "isla_final_1"),
 			Choice("Kiss my gun for good luck.", "kiss_gun", 5, sDamageUp, "islaKiss"),

@@ -355,7 +355,7 @@ scene_clyde = {
 		Page(spk_clyde, "It's time for a bit of introspection on my part."),
 		Page(spk_clyde, "But you... you know where your horse is now."),
 		CodePage(PorChange, [oPorJohnny, sPorJohnnyNeutral]),
-		Page(spk_johnny, "..."),
+		Page(spk_johnny, "...Alloy's house..."),
 		Page(spk_johnny, "Then that's where I'll go."),
 		Page(spk_clyde, "Take care, Johnny."),
 		CodePage(PorExit, [oPorClyde]),
