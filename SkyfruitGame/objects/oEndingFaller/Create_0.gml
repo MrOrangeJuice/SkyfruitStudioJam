@@ -33,6 +33,8 @@ sprites = [
 	sTankEnemyFire,
 	sTankEnemy,
 	sTitleCard,
+	sGiftSmall,
+	sTextbox,
 	
 	// Upgrades
 	sHealthUp,
@@ -41,6 +43,7 @@ sprites = [
 	sMoveSpeedUp,
 	sDamageUp,
 	sBigBullets,
+	sInvulernableDash,
 	
 	// Portraits
 	sPorJohnnyNeutral,

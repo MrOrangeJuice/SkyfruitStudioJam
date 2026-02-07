@@ -1,3 +1,4 @@
+global.debug = true;
 global.paused = false;
 global.hitPause = false;
 global.maxHealth = 10;
