@@ -53,8 +53,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Enemies.yy",
+    "name":"Wrench",
+    "path":"folders/Sprites/Enemies/Wrench.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
