@@ -25,8 +25,8 @@ save_file_detected = file_exists(SAVE_FILE_NAME);
 
 StateMain = function() {
 
-	sel_tar_y = 110 + 18*sel_pos;
 	sel_tar_x = 110;
+	sel_tar_y = 112 + 18*sel_pos;
 	if (key_up or key_down) {
 		audio_play_sound(snd_GunClick, 0, false);
 		sel_pos = (sel_pos + key_down - key_up + array_length(main_options)) % array_length(main_options);
@@ -87,12 +87,12 @@ credits_names = [
 credits_desc = [
 	"A programmer/artist/musician/storyteller who has been making the same pixel-art wizard RPG for two years.",
 	"The Lead Designer of Sour Lemon Studios, a neat little indie game company working on Tower of Dreams and other cool platformers!",
-	"Doty description",
+	"An \"amateur\" pixel artist? Doty I'm not writing that, just LOOK at the portraits you made gosh-darnit!!!",
 ]
 credits_plug = [
 	"Wizard Magic on Steam!",
 	"Tower of Dreams on Steam!",
-	"Doty's thing!",
+	"Doty's Twitter!",
 ]
 StateCredits = function() {
 
@@ -102,6 +102,7 @@ StateCredits = function() {
 		audio_play_sound(snd_GunClick, 0, false);
 		sel_pos = (sel_pos + key_down - key_up + array_length(credits_positions)) % array_length(credits_positions);
 	} else if (key_select) {
+		audio_play_sound(snd_GunFire, 0, false);
 		
 		// Mallory's link
 		if (sel_pos == 0) { url_open("https://store.steampowered.com/app/3896170/Wizard_Magic/"); }
@@ -110,11 +111,10 @@ StateCredits = function() {
 		if (sel_pos == 1) { url_open("https://store.steampowered.com/app/2597470/Tower_of_Dreams/"); }
 
 		// Doty's link...?
-		if (sel_pos == 2) {	audio_play_sound(snd_GunFire, 0, false); }
+		if (sel_pos == 2) {	url_open("https://x.com/DustyKether"); }
 		
 		// Back
 		if (sel_pos == 3) {
-			audio_play_sound(snd_GunFire, 0, false);
 			sel_pos = 2;
 			state = StateMain;
 		}

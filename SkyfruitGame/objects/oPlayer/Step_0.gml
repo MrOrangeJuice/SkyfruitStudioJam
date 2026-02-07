@@ -55,6 +55,11 @@ if (gamepad_button_check_pressed(0,gp_shoulderl) || gamepad_button_check_pressed
 	key_dash = 1;
 	global.controller = 1;
 }
+if (gamepad_button_check_pressed(0,gp_shoulderlb) || gamepad_button_check_pressed(0,gp_shoulderrb) || gamepad_button_check_pressed(4,gp_shoulderlb) || gamepad_button_check_pressed(4,gp_shoulderrb))
+{
+	key_dash = 1;
+	global.controller = 1;
+}
 
 if(!global.paused && !global.hitPause)
 {

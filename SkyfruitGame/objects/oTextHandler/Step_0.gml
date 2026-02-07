@@ -10,7 +10,7 @@ if (gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(4,g
 
 
 
-page_rendered = (active_textbox != noone) && (active_textbox.char_count >= active_textbox.text_length);
+page_rendered = (active_textbox != noone and instance_exists(active_textbox)) && (active_textbox.char_count >= active_textbox.text_length);
 next_page_choice = (page + 1 < array_length(page_array)) && (page_array[page + 1].type == PAGE_TYPE.CHOICE);
 
 var _state_prior = state;
