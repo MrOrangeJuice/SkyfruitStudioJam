@@ -8,6 +8,11 @@ key_up = 0;
 key_down = 0;
 key_select = 0;
 
+analogUpPrev = false;
+analogDownPrev = false;
+analogUpPrevD = false;
+analogDownPrevD = false;
+
 sel_x = 110;
 sel_tar_x = 0;
 sel_y = 0;

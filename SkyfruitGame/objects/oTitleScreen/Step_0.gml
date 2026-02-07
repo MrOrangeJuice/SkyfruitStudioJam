@@ -40,3 +40,40 @@ state();
 // Selector approaching target
 sel_x = Approach(sel_x, sel_tar_x, 0.2, 0.3);
 sel_y = Approach(sel_y, sel_tar_y, 0.2, 0.3);
+
+// Record analog inputs for this frame
+if(gamepad_axis_value(0,gp_axislv) < -0.4)
+{
+	analogUpPrev = true;	
+}
+else
+{
+	analogUpPrev = false;	
+}
+
+if(gamepad_axis_value(0,gp_axislv) > 0.4)
+{
+	analogDownPrev = true;	
+}
+else
+{
+	analogDownPrev = false;	
+}
+
+if(gamepad_axis_value(4,gp_axislv) < -0.4)
+{
+	analogUpPrevD = true;	
+}
+else
+{
+	analogUpPrevD = false;	
+}
+
+if(gamepad_axis_value(4,gp_axislv) > 0.4)
+{
+	analogDownPrevD = true;	
+}
+else
+{
+	analogDownPrevD = false;	
+}

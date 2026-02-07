@@ -7,8 +7,17 @@ resultsFrame = 0;
 continueY = 72;
 continueYTarget = 72;
 
-reward = 20;
-bonus = 20;
+if(room == rTutorial)
+{
+	reward = 2;
+	bonus = 2;
+}
+else
+{
+	reward = 20;
+	bonus = 20;
+}
+
 curBonus = bonus;
 displayReward = false;
 displayBonus = false;

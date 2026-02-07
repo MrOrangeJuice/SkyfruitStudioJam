@@ -37,6 +37,11 @@ fireRateUpgrade = CheckUpgrades(UPGRADES.FIRE_SPEED_UP);
 moveSpeedUpgrade = CheckUpgrades(UPGRADES.MOVE_SPEED_UP);
 healthUpgrade = CheckUpgrades(UPGRADES.HEALTH_UP);
 
+analogUpPrev = false;
+analogDownPrev = false;
+analogUpPrevD = false;
+analogDownPrevD = false;
+
 
 global.enemiesLeft = 20;
 

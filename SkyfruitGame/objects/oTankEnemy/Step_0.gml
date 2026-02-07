@@ -175,12 +175,8 @@ if(!global.paused && !global.hitPause)
 		}
 		
 		// Horizontal Collision
-		if (place_meeting(x+hsp,y,oWall))
+		if (place_meeting(x+(16*hsp),y,oWall))
 		{
-			while (!place_meeting(x+sign(hsp),y,oWall))
-			{
-				x = x + sign(hsp);
-			}
 			hsp = 0;
 		}
 		
@@ -210,6 +206,26 @@ if(!global.paused && !global.hitPause)
 				}
 				// Left
 				if(!place_meeting(x-i,y,oTankEnemy))
+				{
+					x -= i;
+					break;
+				}
+			}
+		}
+		
+		// Get out of walls
+		if(place_meeting(x,y,oWall))
+		{
+			for(i = 0; i < 1000; i++)
+			{
+				// Right
+				if(!place_meeting(x+i,y,oWall))
+				{
+					x += i;
+					break;
+				}
+				// Left
+				if(!place_meeting(x-i,y,oWall))
 				{
 					x -= i;
 					break;

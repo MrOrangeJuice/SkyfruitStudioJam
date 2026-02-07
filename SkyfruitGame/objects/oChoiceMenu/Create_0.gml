@@ -12,6 +12,10 @@ pos = 0;
 key_up = 0;
 key_down = 0;
 key_select = 0;
+analogUpPrev = false;
+analogDownPrev = false;
+analogUpPrevD = false;
+analogDownPrevD = false;
 options = [];
 for (var i = 0; i < array_length(choices); i++) {
 	
