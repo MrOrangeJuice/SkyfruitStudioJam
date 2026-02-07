@@ -4,3 +4,6 @@ accel = 0.1;
 state = 0;
 hp = 100;
 flash = 0;
+firing = false;
+fired = false;
+alarm[0] = room_speed * random_range(2.5,3.5);
