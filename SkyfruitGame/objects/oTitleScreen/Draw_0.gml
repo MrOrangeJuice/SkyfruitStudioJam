@@ -1,5 +1,17 @@
 if live_call() return live_result;
 
+// BG
+draw_sprite_ext(
+	sBackgroundOutside,
+	0,
+	0,
+	0,
+	1,
+	1,
+	0,
+	c_white,
+	0.5
+)
 
 if (state == StateMain) {
 
@@ -75,11 +87,11 @@ if (state == StateMain) {
 	draw_sprite_stretched(
 		sTextbox,
 		0,
-		240, 160, 40, 16
+		252, 160, 40, 16
 	)
 	draw_set_halign(fa_left);
 	draw_text_border(
-		252, 159, "Back"
+		264, 159, "Back"
 	)
 	
 

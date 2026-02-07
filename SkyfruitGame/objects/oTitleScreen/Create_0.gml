@@ -82,7 +82,7 @@ credits_positions = [
 	[160, 24],
 	[160, 80],
 	[160, 136],
-	[220, 172],
+	[232, 172],
 ]
 credits_names = [
 	"Arkington \"Mallory\" Owen",
@@ -92,7 +92,7 @@ credits_names = [
 credits_desc = [
 	"A programmer/artist/musician/storyteller who has been making the same pixel-art wizard RPG for two years.",
 	"The Lead Designer of Sour Lemon Studios, a neat little indie game company working on Tower of Dreams and other cool platformers!",
-	"An \"amateur\" pixel artist? Doty I'm not writing that, just LOOK at the portraits you made gosh-darnit!!!",
+	"An \"amateur\" pixel artist? Doty I'm not writing that, just LOOK at the portraits and backgrounds you made gosh-darnit!!!",
 ]
 credits_plug = [
 	"Wizard Magic on Steam!",
