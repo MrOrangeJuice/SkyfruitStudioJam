@@ -1,1 +1,1 @@
-ClearTextHandler();
+if (room == rScene) ClearTextHandler();

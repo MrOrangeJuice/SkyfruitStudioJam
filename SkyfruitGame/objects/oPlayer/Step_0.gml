@@ -1,5 +1,8 @@
 // Get Player Input
 
+with (oBattleSystem) { if (resultsSpawned) exit; }
+
+
 key_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 key_jump = keyboard_check(vk_space) || keyboard_check(ord("Z")) || keyboard_check(ord("P"));

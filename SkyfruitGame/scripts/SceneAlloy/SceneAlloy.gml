@@ -19,7 +19,7 @@ scene_alloy = {
 		Page(spk_johnny, "..."),
 		CodePage(PorChange, [oPorJohnny, sPorJohnnySus]),
 		Page(spk_johnny, "Wait how do I know you?"),
-		Page(spk_johnny, "I know I know you. Your name's Alloy. I know where ya live an' everythin'"),
+		Page(spk_johnny, "I know I know you. Your name's Alloy. I know where ya live an' everythin'."),
 		Page(spk_johnny, "But... where did we meet...? What do you..."),
 		Page(spk_alloy, "Oh Johnny. The cowboy. Who rides a horse."),
 		CodePage(PorChange, [oPorAlloy, sPorAlloyHappy]),
@@ -101,6 +101,7 @@ scene_alloy = {
 		Page(spk_johnny, "But if pleasin' you is what it takes to get to my horse..."),
 		CodePage(PorChange, [oPorJohnny, sPorJohnnyNeutral]),
 		Page(spk_johnny, "Then Johnny's gonna hafta bust out the ol' slick once again."),
+		CodePage(PorChange, [oPorJohnny, sPorJohnnyMouth]),
 		GotoPage("alloy_return_point"),
 	],
 	challenge: [
@@ -110,6 +111,7 @@ scene_alloy = {
 		Page(spk_johnny, "If pleasin' you is what it takes to get my horse back..."),
 		CodePage(PorChange, [oPorJohnny, sPorJohnnyNeutral]),
 		Page(spk_johnny, "Then |S|please/S/ you I shall!"),
+		CodePage(PorChange, [oPorJohnny, sPorJohnnyMouth]),
 		GotoPage("alloy_return_point"),
 	],
 	

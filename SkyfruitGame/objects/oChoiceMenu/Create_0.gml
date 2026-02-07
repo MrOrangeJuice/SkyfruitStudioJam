@@ -23,7 +23,7 @@ for (var i = 0; i < array_length(choices); i++) {
 n_options = array_length(options);
 
 // Hide original textboxes for many options
-if (n_options > 4) {
+if (n_options > 3) {
 	with (oTextbox) { visible = false; }
 }
 
@@ -33,7 +33,7 @@ textboxes = [];
 textbox_w = 150;
 textbox_h = 18;
 textbox_y = function(_pos) {
-	return  20 + (textbox_h + 8)*_pos;
+	return  32 + (textbox_h + 4)*_pos;
 }
 
 for (var i = 0; i < n_options; i++) {

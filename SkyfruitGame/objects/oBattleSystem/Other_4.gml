@@ -34,15 +34,4 @@ switch(room)
 		break;
 }
 
-
-
-bigBulletUpgrade = CheckUpgrades(UPGRADES.BIG_BULLETS);
-invincDashUpgrade = CheckUpgrades(UPGRADES.INVULNERABLE_DASH);
-
-damageUpgrade = CheckUpgrades(UPGRADES.DAMAGE_UP);
-dashUpgrade = CheckUpgrades(UPGRADES.EXTRA_DASH);
-fireRateUpgrade = CheckUpgrades(UPGRADES.FIRE_SPEED_UP);
-moveSpeedUpgrade = CheckUpgrades(UPGRADES.MOVE_SPEED_UP);
-healthUpgrade = CheckUpgrades(UPGRADES.HEALTH_UP);
-
-global.maxHealth = 10 + (healthUpgrade * 2);
+ApplyUpgrades();

@@ -5,7 +5,7 @@ healthToDraw = global.health;
 xMod = 0;
 
 
-// Draw health (also in rScene)
+// Draw health and upgrades (also in rScene)
 
 if (room != rTitle and room != rHorseEnding and room != rNormalEnding) {
 	
@@ -37,20 +37,16 @@ if (room != rTitle and room != rHorseEnding and room != rNormalEnding) {
 		}
 		healthToDraw--;
 	}
-}
-
-
-if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding) {
-
-	upgradeX = 88;
-	upgradeY = 2;
-	textOffsetX = 14;
-	textOffsetY = 5;
+	
 	
 	// Draw upgrade icons
+	upgradeX = 88;
+	upgradeY = 2;
+	textOffsetX = 20;
+	textOffsetY = 5;
 	if(damageUpgrade > 1)
 	{
-		draw_sprite(sDamageUp,0,upgradeX,upgradeY);
+		draw_sprite(sDamageUp,0,upgradeX+7,upgradeY);
 			draw_text_border(
 		upgradeX + textOffsetX,
 		upgradeY + textOffsetY,
@@ -59,16 +55,16 @@ if (room != rTitle and room != rScene and room != rHorseEnding and room != rNorm
 	}
 	else if(damageUpgrade > 0)
 	{
-		draw_sprite(sDamageUp,0,upgradeX,upgradeY);
+		draw_sprite(sDamageUp,0,upgradeX+7,upgradeY);
 	}
 	else
 	{
-		draw_sprite_ext(sDamageUp,0,upgradeX,upgradeY,1,1,0,c_white,0.5);
+		draw_sprite_ext(sDamageUp,0,upgradeX+7,upgradeY,1,1,0,c_white,0.5);
 	}
 	
 	if(dashUpgrade > 1)
 	{
-		draw_sprite(sExtraDash,0,upgradeX+18,upgradeY);
+		draw_sprite(sExtraDash,0,upgradeX+25,upgradeY);
 			draw_text_border(
 		upgradeX + textOffsetX+18,
 		upgradeY + textOffsetY,
@@ -77,16 +73,16 @@ if (room != rTitle and room != rScene and room != rHorseEnding and room != rNorm
 	}
 	else if(dashUpgrade > 0)
 	{
-		draw_sprite(sExtraDash,0,upgradeX+18,upgradeY);
+		draw_sprite(sExtraDash,0,upgradeX+25,upgradeY);
 	}
 	else
 	{
-		draw_sprite_ext(sExtraDash,0,upgradeX+18,upgradeY,1,1,0,c_white,0.5);
+		draw_sprite_ext(sExtraDash,0,upgradeX+25,upgradeY,1,1,0,c_white,0.5);
 	}
 	
 	if(fireRateUpgrade > 1)
 	{
-		draw_sprite(sFireSpeedUp,0,upgradeX+36,upgradeY);
+		draw_sprite(sFireSpeedUp,0,upgradeX+43,upgradeY);
 			draw_text_border(
 		upgradeX + textOffsetX+36,
 		upgradeY + textOffsetY,
@@ -95,16 +91,16 @@ if (room != rTitle and room != rScene and room != rHorseEnding and room != rNorm
 	}
 	else if(fireRateUpgrade > 0)
 	{
-		draw_sprite(sFireSpeedUp,0,upgradeX+36,upgradeY);
+		draw_sprite(sFireSpeedUp,0,upgradeX+43,upgradeY);
 	}
 	else
 	{
-		draw_sprite_ext(sFireSpeedUp,0,upgradeX+36,upgradeY,1,1,0,c_white,0.5);
+		draw_sprite_ext(sFireSpeedUp,0,upgradeX+43,upgradeY,1,1,0,c_white,0.5);
 	}
 	
 	if(moveSpeedUpgrade > 1)
 	{
-		draw_sprite(sMoveSpeedUp,0,upgradeX+54,upgradeY);
+		draw_sprite(sMoveSpeedUp,0,upgradeX+61,upgradeY);
 			draw_text_border(
 		upgradeX + textOffsetX+54,
 		upgradeY + textOffsetY,
@@ -113,49 +109,36 @@ if (room != rTitle and room != rScene and room != rHorseEnding and room != rNorm
 	}
 	else if(moveSpeedUpgrade > 0)
 	{
-		draw_sprite(sMoveSpeedUp,0,upgradeX+54,upgradeY);
+		draw_sprite(sMoveSpeedUp,0,upgradeX+61,upgradeY);
 	}
 	else
 	{
-		draw_sprite_ext(sMoveSpeedUp,0,upgradeX+54,upgradeY,1,1,0,c_white,0.5);
+		draw_sprite_ext(sMoveSpeedUp,0,upgradeX+61,upgradeY,1,1,0,c_white,0.5);
 	}
 	
-	if(healthUpgrade > 1)
-	{
-		draw_sprite(sHealthUp,0,upgradeX+72,upgradeY);
-			draw_text_border(
-		upgradeX + textOffsetX+72,
-		upgradeY + textOffsetY,
-		healthUpgrade
-		)
-	}
-	else if(healthUpgrade > 0)
-	{
-		draw_sprite(sHealthUp,0,upgradeX+72,upgradeY);
-	}
-	else
-	{
-		draw_sprite_ext(sHealthUp,0,upgradeX+72,upgradeY,1,1,0,c_white,0.5);
-	}
 	
 	if(bigBulletUpgrade > 0)
 	{
-		draw_sprite(sBigBullets,0,upgradeX+99,upgradeY);
+		draw_sprite(sBigBullets,0,upgradeX+89,upgradeY);
 	}
 	else
 	{
-		draw_sprite_ext(sBigBullets,0,upgradeX+99,upgradeY,1,1,0,c_white,0.5);
+		draw_sprite_ext(sBigBullets,0,upgradeX+89,upgradeY,1,1,0,c_white,0.5);
 	}
 	
 	if(invincDashUpgrade > 0)
 	{
-		draw_sprite(sInvulernableDash,0,upgradeX+117,upgradeY);
+		draw_sprite(sInvulernableDash,0,upgradeX+107,upgradeY);
 	}
 	else
 	{
-		draw_sprite_ext(sInvulernableDash,0,upgradeX+117,upgradeY,1,1,0,c_white,0.5);
+		draw_sprite_ext(sInvulernableDash,0,upgradeX+107,upgradeY,1,1,0,c_white,0.5);
 	}
-	
+}
+
+
+if (room != rTitle and room != rScene and room != rHorseEnding and room != rNormalEnding) {
+
 	// Draw gifts
 	giftX = SCREEN_W - 20;
 	giftY = 16;

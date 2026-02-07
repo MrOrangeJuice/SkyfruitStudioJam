@@ -28,7 +28,7 @@ switch (upgrade) {
 		break;
 		
 	case UPGRADES.INVULNERABLE_DASH:
-		sprite_index = sBigBullets;
+		sprite_index = sInvulernableDash;
 		upgrade_text = "INVULNERABLE DASH!!";
 		break;
 		
