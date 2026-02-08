@@ -17,6 +17,9 @@ sel_y = 0;
 sel_tar_y = 0;
 sel_pos = 0;
 
+buffer_timer = 0;
+buffer_frames = 5;
+
 
 main_options = [
 	"Continue",
@@ -70,6 +73,7 @@ StateMain = function() {
 		// Open pause menu
 		if (sel_pos == 3) {
 			audio_play_sound(snd_PauseIn, 0, false);
+			buffer_timer = buffer_frames;
 			global.paused = true;
 		}
 	}

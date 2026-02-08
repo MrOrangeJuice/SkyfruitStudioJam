@@ -158,6 +158,8 @@ if(global.paused)
 				}
 				pauseOption = 0;
 				global.paused = false;
+				with (oTitleScreen)
+					buffer_timer = buffer_frames;
 				keyboard_clear(vk_space);
 				break;
 			case 1:
