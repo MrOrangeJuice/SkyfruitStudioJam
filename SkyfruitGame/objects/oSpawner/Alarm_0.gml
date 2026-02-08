@@ -1,6 +1,6 @@
 // Spawn alarm
 
-if(!IsOnScreen(y,x) && (global.enemiesLeft - instance_number(oTankEnemy)) > 0 && instance_number(oTankEnemy) < 10)
+if(!IsOnScreen(y,x) && (global.enemiesLeft - instance_number(oTankEnemy)) > 3 && instance_number(oTankEnemy) < 10)
 {
 	var rand = random_range(0,4);
 	var xplace = x+random_range(-64,64);
