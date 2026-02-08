@@ -17,9 +17,9 @@ if (state == StateMain) {
 
 	// Title card
 	draw_sprite(
-		sLogo,
-		0,
-		SCREEN_W/2 - sprite_get_width(sLogo)/2 - 2,
+		sLogoAnimated,
+		currentFrame,
+		SCREEN_W/2 - sprite_get_width(sLogo)/2,
 		16
 	)
 
