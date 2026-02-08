@@ -34,6 +34,7 @@ sprites = [
 	sTitleCard,
 	sGiftSmall,
 	sTextbox,
+	sGarbageClosed,
 	
 	// Upgrades
 	sBottle,

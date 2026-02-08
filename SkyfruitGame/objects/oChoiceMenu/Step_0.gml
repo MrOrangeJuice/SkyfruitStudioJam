@@ -122,3 +122,5 @@ else
 {
 	analogDownPrevD = false;	
 }
+
+alpha = Approach(alpha, 0.5, 0.1, 0.01);
