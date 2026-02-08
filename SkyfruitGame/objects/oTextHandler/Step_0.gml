@@ -1,5 +1,7 @@
 if live_call() return live_result;
 
+if (global.paused) { exit; }
+
 interact = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space);
 if (gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(4,gp_face1))
 {

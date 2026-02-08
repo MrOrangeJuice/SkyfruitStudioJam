@@ -189,7 +189,6 @@ scene_isla = {
 	],
 
 	isla_5: [
-		CodePage(PorMove, [oPorJohnny, 0]),
 		Page(spk_johnny, "Jus' lemme tell you my woes for a time and I'll be on my way."),
 		CodePage(PorFace, [oPorJohnny, RIGHT]),
 		CodePage(PorFace, [oPorIsla, LEFT]),

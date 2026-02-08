@@ -44,6 +44,7 @@ if (room != rTitle and room != rHorseEnding and room != rNormalEnding) {
 	upgradeY = 2;
 	textOffsetX = 20;
 	textOffsetY = 5;
+	draw_set_halign(fa_left);
 	if(damageUpgrade > 1)
 	{
 		draw_sprite(sDamageUp,0,upgradeX+7,upgradeY);

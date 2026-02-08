@@ -19,8 +19,8 @@ if (state == StateMain) {
 	draw_sprite(
 		sLogo,
 		0,
-		SCREEN_W/2 - sprite_get_width(sLogo)/2,
-		12
+		SCREEN_W/2 - sprite_get_width(sLogo)/2 - 2,
+		16
 	)
 
 	// Title menu options
