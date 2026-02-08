@@ -54,14 +54,12 @@ if(key_pause)
 		// Reset pause menu
 		pauseOption = 0;
 		global.paused = false;
-			print("BS SET FALSE");
 
 	}
 	else if(!global.paused)
 	{
 		audio_play_sound(snd_PauseIn,5,false);
 		global.paused = true;	
-			print("BS SET TRUE");
 	}
 }
 

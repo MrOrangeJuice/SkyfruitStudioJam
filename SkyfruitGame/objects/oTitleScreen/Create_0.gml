@@ -74,7 +74,6 @@ StateMain = function() {
 		if (sel_pos == 3) {
 			audio_play_sound(snd_PauseIn, 0, false);
 			buffer_timer = buffer_frames;
-			print("TITLE SCREEN SET TRUE");
 			global.paused = true;
 		}
 	}
