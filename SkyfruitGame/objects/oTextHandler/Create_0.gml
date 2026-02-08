@@ -1,4 +1,3 @@
-if live_call() return live_result;
 text_struct = NONE; // The text struct loaded into the handler
 page_array = NONE; // Array of pages loaded into the handler
 active_textbox = noone;
@@ -97,7 +96,7 @@ StateReadPage = function() {
 
 StateAwaitNextPage = function() {
 
-	if (interact or keyboard_check(ord("C"))) {
+	if (interact) {
 
 		// Textbox is over
 		instance_destroy(active_textbox);

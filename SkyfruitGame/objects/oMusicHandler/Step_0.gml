@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 // Play new track
 if (incoming_track != NONE and playing_track == NONE) {
 	playing_track = audio_play_sound(incoming_track, 0, true);

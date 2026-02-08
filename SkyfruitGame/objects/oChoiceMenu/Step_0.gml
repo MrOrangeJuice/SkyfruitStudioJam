@@ -1,6 +1,3 @@
-if live_call() return live_result;
-
-
 // Handle pausing
 if (global.paused) {
 	pause_timer = 5;

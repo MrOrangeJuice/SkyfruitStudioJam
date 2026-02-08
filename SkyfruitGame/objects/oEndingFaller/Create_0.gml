@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 x = random_range(0, SCREEN_W);
 y = -100;
 

@@ -1,6 +1,3 @@
-if live_call() return live_result;
-
-
 key_pause = keyboard_check_pressed(vk_escape);
 key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);

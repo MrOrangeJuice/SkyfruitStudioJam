@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 if (global.paused) { exit; }
 
 key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);

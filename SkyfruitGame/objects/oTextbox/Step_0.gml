@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 interact = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space);
 if (gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(4,gp_face1))
 {
@@ -23,7 +21,7 @@ text_pause_timer--;
 text_pause_voice_timer--;
 
 // Skip text (do this before playing audio)
-if (interact or keyboard_check(ord("C"))) {
+if (interact) {
 	char_count = text_length;
 }
 

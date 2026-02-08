@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 switch (upgrade) {
 	
 	case UPGRADES.HEALTH_UP:

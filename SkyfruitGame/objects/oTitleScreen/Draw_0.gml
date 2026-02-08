@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 // BG
 draw_sprite_ext(
 	sBackgroundOutside,
@@ -20,7 +18,7 @@ if (state == StateMain) {
 		sLogoAnimated,
 		currentFrame,
 		SCREEN_W/2 - sprite_get_width(sLogo)/2,
-		12
+		16
 	)
 
 	// Title menu options

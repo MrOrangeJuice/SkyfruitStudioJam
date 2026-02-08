@@ -1,5 +1,4 @@
 /// @desc HP bar!
-if live_call() return live_result;
 bar_len = 200;
 
 var _frac = max(hp/starthp, 0);

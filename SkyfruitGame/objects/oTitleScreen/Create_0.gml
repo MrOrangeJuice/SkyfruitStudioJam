@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 StopMusic(true);
 PlayMusic(mus_MainTheme);
 

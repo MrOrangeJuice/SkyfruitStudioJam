@@ -1,4 +1,3 @@
-if live_call() return live_result;
 if (oPlayer.bbox_top < bbox_top - 1 and !open) {
 	shake_frames = max_shake_frames;
 	open = true;

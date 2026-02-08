@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 healthTextScale = max(healthTextScale * .95, 1);
 healthToDraw = global.health;
 xMod = 0;
@@ -44,6 +42,7 @@ if (room != rTitle and room != rHorseEnding and room != rNormalEnding) {
 	upgradeY = 2;
 	textOffsetX = 20;
 	textOffsetY = 5;
+	draw_set_halign(fa_left);
 	if(damageUpgrade > 1)
 	{
 		draw_sprite(sDamageUp,0,upgradeX+7,upgradeY);
