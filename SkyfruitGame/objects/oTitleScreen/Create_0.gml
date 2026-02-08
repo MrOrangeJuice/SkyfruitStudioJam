@@ -41,18 +41,7 @@ StateMain = function() {
 		
 		// No save to load
 		if (sel_pos == 0 and !save_file_detected) { audio_play_sound(snd_GunEmpty, 0, false); }
-		
-		// Load save file
-		if (sel_pos == 0 and save_file_detected) {
-			var _worked = LoadGame();
-			if (_worked == 0) {
-				audio_play_sound(snd_GunFire, 0, false);
-				StopMusic();
-				NextScene();
-			} else {
-				audio_play_sound(snd_GunEmpty, 0, false);
-			}
-		}
+
 
 		// Start a new game
 		if (sel_pos == 1) {

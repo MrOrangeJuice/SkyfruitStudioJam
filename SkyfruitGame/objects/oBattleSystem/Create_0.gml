@@ -1,12 +1,12 @@
 // Global objects
+global.audio_ready = false;
+
 global.text_handler = instance_create_depth(0, 0, 0, oTextHandler);
 global.transition = instance_create_depth(0, 0, 0, oTransition);
 global.music_handler = instance_create_depth(0, 0, 0, oMusicHandler);
-SetVolumes(); // initialize volumes
 
 // Audio init
 audio_group_load(audiogroup_Music);
-audio_sound_loop_start(mus_JohnnyFights, 13.71428571);
 
 healthTextScale = 1;
 enemyUITextScale = 1;

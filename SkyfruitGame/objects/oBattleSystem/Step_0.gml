@@ -1,3 +1,12 @@
+if (!global.audio_ready) {
+    if (mouse_check_button_pressed(mb_any) || keyboard_check_pressed(vk_anykey)) {
+        audio_resume_all(); // unlocks WebAudio
+        global.audio_ready = true;
+		SetVolumes(); // initialize volumes
+		audio_sound_loop_start(mus_JohnnyFights, 13.71428571);
+    }
+}
+
 key_pause = keyboard_check_pressed(vk_escape);
 key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);

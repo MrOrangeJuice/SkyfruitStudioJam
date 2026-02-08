@@ -1,5 +1,5 @@
 // Play new track
-if (incoming_track != NONE and playing_track == NONE) {
+if (global.audio_ready and incoming_track != NONE and playing_track == NONE and audio_group_is_loaded(audiogroup_Music)) {
 	playing_track = audio_play_sound(incoming_track, 0, true);
 	incoming_track = NONE;
 }

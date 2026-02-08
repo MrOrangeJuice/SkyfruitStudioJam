@@ -3,7 +3,6 @@ function NextScene() {
 	// Always advance beat and save game
 	global.health = global.maxHealth;
 	if (room != rTitle) global.storyBeat++;
-	SaveGame();
 	ClearTextHandler();
 	StopMusic();
 
