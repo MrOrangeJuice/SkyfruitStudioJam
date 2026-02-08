@@ -67,6 +67,7 @@ if (key_select and t > grace_frames) {
 	// Not enough gift
 	if (global.giftCount < _gift_cost) {
 		audio_play_sound(snd_GunEmpty, 0, false);
+		with (oBattleSystem) { 	displayGiftTimer = displayGiftFrames; }
 	}
 	
 	// Successful select
