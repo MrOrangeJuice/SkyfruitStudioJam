@@ -1,5 +1,6 @@
 StopMusic(true);
 PlayMusic(mus_MainTheme);
+ResetConvoState();
 
 key_pause = 0;
 key_up = 0;
