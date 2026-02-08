@@ -1,18 +1,18 @@
-if (global.paused) { exit; }
-
-print(buffer_timer);
-	
-
 state();
 
-if(buffer_timer > 0)
+if(buffer_timer > 0 or global.paused)
 {
 	buffer_timer--;
+	key_up = 0;
+	key_down = 0;
+	key_select = 0;
+	key_pause = 0;
 }
 else
 {
 	key_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 	key_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
+    key_select = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("P"));
 
 	if (key_up) || (key_down) ||  (key_select) || (key_pause)
 	{

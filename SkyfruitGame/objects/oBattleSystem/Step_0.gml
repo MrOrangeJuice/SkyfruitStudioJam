@@ -53,12 +53,15 @@ if(key_pause)
 		audio_play_sound(snd_PauseOut,5,false);
 		// Reset pause menu
 		pauseOption = 0;
-		global.paused = false;	
+		global.paused = false;
+			print("BS SET FALSE");
+
 	}
 	else if(!global.paused)
 	{
 		audio_play_sound(snd_PauseIn,5,false);
 		global.paused = true;	
+			print("BS SET TRUE");
 	}
 }
 
@@ -158,8 +161,7 @@ if(global.paused)
 				}
 				pauseOption = 0;
 				global.paused = false;
-				with (oTitleScreen)
-					buffer_timer = buffer_frames;
+				with (oTitleScreen) { buffer_timer = buffer_frames; }
 				keyboard_clear(vk_space);
 				break;
 			case 1:
@@ -167,6 +169,7 @@ if(global.paused)
 				break;
 			case 2:
 				SlideTransition(TRANS_MODE.GOTO, rTitle);
+				with (oTitleScreen) { buffer_timer = buffer_frames; }
 				global.paused = false;
 				break;
 			default:
