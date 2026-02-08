@@ -97,7 +97,7 @@ if(global.enemiesLeft <= 0 && !resultsSpawned && room != rTitle && room != rNorm
 	if(global.resultsTime <= 0)
 	{
 		resultsSpawned = true;
-		resultsYTarget = 36;
+		resultsYTarget = 24;
 		alarm[0] = room_speed * 1;
 		audio_play_sound(snd_GunClick,5,false);
 	
