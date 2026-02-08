@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 draw_text_border(
 	SCREEN_W/2,
 	SCREEN_H/2 - 15,

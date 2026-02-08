@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 if (global.paused) { exit; }
 
 interact = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_space);

@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 draw_set_font(font);
 if (center_text) {
 	draw_set_halign(fa_center);

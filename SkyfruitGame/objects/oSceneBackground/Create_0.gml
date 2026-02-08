@@ -1,4 +1,3 @@
-if live_call() return live_result;
 depth = BACKGROUND_DEPTH;
 x = 0;
 y = -400;

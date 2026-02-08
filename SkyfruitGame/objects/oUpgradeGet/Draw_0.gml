@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 // Icon
 draw_sprite_ext(
 	sprite_index,

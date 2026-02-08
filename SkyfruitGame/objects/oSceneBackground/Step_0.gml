@@ -1,5 +1,3 @@
-if live_call() return live_result;
-
 vel_y += acc_y;
 y += vel_y;
 if (y > 0) {
