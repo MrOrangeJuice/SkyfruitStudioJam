@@ -1,4 +1,4 @@
-if (oPlayer.bbox_top < bbox_top - 1 and !open) {
+if (instance_exists(oPlayer) and oPlayer.bbox_top < bbox_top - 1 and !open) {
 	shake_frames = max_shake_frames;
 	open = true;
 	instance_create_depth(x, y, layer_get_depth(layer_get_id("Instances")) + 50, oGarbageBottom);
